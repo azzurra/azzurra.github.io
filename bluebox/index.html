@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='it'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='nanoc 3.4.3' name='generator'>
+    <title>Azzurra Devel :: Bluebox</title>
+    <link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/overrides.min.css' rel='stylesheet' type='text/css'>
+    <!-- IE Sucks -->
+    <!--[if lt IE 9]>
+      <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+    <!-- Google CSE -->
+    <script src='/js/cse.js'></script>
+    <!-- Shortcut icons et al. -->
+    <link href='/favicon.ico' rel='shortcut icon'>
+    <link href='/apple-touch-icon-144-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+    <link href='/apple-touch-icon-114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+    <link href='/apple-touch-icon-72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+    <link href='/apple-touch-icon-57-precomposed.png' rel='apple-touch-icon-precomposed'>
+  </head>
+  <body>
+    <!-- Top-level navigation bar -->
+    <div class='navbar navbar-fixed-top'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='brand' href='/'>
+            <img src='/img/logo.png'>
+            Azzurra Devel
+          </a>
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li><a href="/">Home</a></li>
+              <li class='dropdown active'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  Progetti
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li class='active'><a tabindex="-1" href="/bluebox/">Bluebox</a></li>
+                  <li><a tabindex="-1" href="/bahamut/">Bahamut Azzurra</a></li>
+                  <li><a tabindex="-1" href="/services/">Azzurra Services</a></li>
+                  <li><a tabindex="-1" href="/apm/">Azzurra Proxy Monitor</a></li>
+                  <li><a tabindex="-1" href="/snow/">Snow Services Logger</a></li>
+                  <li><a tabindex="-1" href="/triviabot/">TriviaBot</a></li>
+                </ul>
+              </li>
+              <li><a href="/contatti.html">Contatti</a></li>
+              <li><a href="/credits.html">Credits</a></li>
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  Azzurra
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li><a tabindex="-1" href="http://www.azzurra.org/">Homepage</a></li>
+                  <li><a tabindex="-1" href="http://www.azzurra.org/chat/">Webchat</a></li>
+                  <li><a tabindex="-1" href="http://forum.azzurra.org/">Forum</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form action='/search.html' class='pull-right navbar-search' id='cse-search-box'>
+              <input class='search-query' name='q' type='text'>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <header class='jumbotron subhead'>
+        <div class='row'>
+          <div class='span12'>
+            <h1>
+              Bluebox
+            </h1>
+          </div>
+        </div>
+      </header>
+      <section>
+        <p>Bluebox, il nuovo ircd di Azzurra IRC Network, è un fork di <a href="http://www.ircd-ratbox.org/">ircd-ratbox</a> con modifiche
+specifiche per l’uso su Azzurra (ad esempio cloaking degli host, halfop, ecc.).</p>
+
+<p>L’ircd è attualmente in fase di sviluppo e sarà presto disponibile in testnet. </p>
+
+<p><strong>Autori principali:</strong> Matteo Panella (morph), Fabrizio Lanotte (tsk)<br />
+<strong>Licenza:</strong> GPLv2</p>
+
+<h2 id="feature-principali">Feature principali</h2>
+
+<ul>
+  <li>Possibilità di ricaricare i vari moduli senza dover riavviare l’intero processo</li>
+  <li>Cloaking degli hostname</li>
+  <li>Channel halfop (mode +h, prefix %)</li>
+  <li>Supporto a SSL (client e server)</li>
+  <li>Supporto a IPv6 (client e server, compreso il funzionamento dual-stack IPv4/IPv6)</li>
+</ul>
+
+<h2 id="download">Download</h2>
+
+<p>Nessun download disponibile, è possibile ottenere i sorgenti dal <a href="https://github.com/azzurra/bluebox">repository</a> del progetto.</p>
+      </section>
+      <div class='row-fluid'>
+        <hr>
+        <footer>
+          &copy;
+          <a href='http://www.azzurra.org'>Azzurra IRC Network</a>
+          &mdash; Contenuto concesso in licenza
+          <a href='https://www.gnu.org/licenses/fdl-1.3.html' target='_blank'>GFDL 1.3</a>
+        </footer>
+      </div>
+    </div>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='/js/bootstrap.min.js'></script>
+    <script src='/js/cse_branding.js'></script>
+  </body>
+</html>

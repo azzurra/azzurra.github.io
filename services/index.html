@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang='it'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='nanoc 3.4.3' name='generator'>
+    <title>Azzurra Devel :: Azzurra Services</title>
+    <link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/overrides.min.css' rel='stylesheet' type='text/css'>
+    <!-- IE Sucks -->
+    <!--[if lt IE 9]>
+      <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+    <!-- Google CSE -->
+    <script src='/js/cse.js'></script>
+    <!-- Shortcut icons et al. -->
+    <link href='/favicon.ico' rel='shortcut icon'>
+    <link href='/apple-touch-icon-144-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+    <link href='/apple-touch-icon-114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+    <link href='/apple-touch-icon-72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+    <link href='/apple-touch-icon-57-precomposed.png' rel='apple-touch-icon-precomposed'>
+  </head>
+  <body>
+    <!-- Top-level navigation bar -->
+    <div class='navbar navbar-fixed-top'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='brand' href='/'>
+            <img src='/img/logo.png'>
+            Azzurra Devel
+          </a>
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li><a href="/">Home</a></li>
+              <li class='dropdown active'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  Progetti
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li><a tabindex="-1" href="/bluebox/">Bluebox</a></li>
+                  <li><a tabindex="-1" href="/bahamut/">Bahamut Azzurra</a></li>
+                  <li class='active'><a tabindex="-1" href="/services/">Azzurra Services</a></li>
+                  <li><a tabindex="-1" href="/apm/">Azzurra Proxy Monitor</a></li>
+                  <li><a tabindex="-1" href="/snow/">Snow Services Logger</a></li>
+                  <li><a tabindex="-1" href="/triviabot/">TriviaBot</a></li>
+                </ul>
+              </li>
+              <li><a href="/contatti.html">Contatti</a></li>
+              <li><a href="/credits.html">Credits</a></li>
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  Azzurra
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li><a tabindex="-1" href="http://www.azzurra.org/">Homepage</a></li>
+                  <li><a tabindex="-1" href="http://www.azzurra.org/chat/">Webchat</a></li>
+                  <li><a tabindex="-1" href="http://forum.azzurra.org/">Forum</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form action='/search.html' class='pull-right navbar-search' id='cse-search-box'>
+              <input class='search-query' name='q' type='text'>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <header class='jumbotron subhead'>
+        <div class='row'>
+          <div class='span12'>
+            <h1>
+              Azzurra Services
+            </h1>
+          </div>
+        </div>
+      </header>
+      <section>
+        <p>Azzurra IRC Services è un pacchetto completo di services IRC in stile DALnet
+che fornisce servizi di registrazione e gestione di nick e canali, invio di
+memo tra utenti, gestione centralizzata di autokill e Q:line/G:line e altre
+funzioni per l’amministrazione di una rete IRC. </p>
+
+<p>Originariamente basati su SirvNET Services di Trevor Klingbeil, i services di
+ Azzurra sono stati riscritti per oltre il 90% dallo staff della rete,
+ adattandoli al protocollo utilizzato dall’ircd di Azzurra e aggiungendo
+ funzionalità non presenti nella versione originale. </p>
+
+<p><strong>Autori principali:</strong> Gastaman, Shaka, Marco Mura (Wolf7), Mav<br />
+<strong>Hanno contribuito:</strong> Daniel Dubois (int), Vincenzo Iozzo (snagg), Michele Vacca (Sonic)<br />
+<strong>Maintainer attuali:</strong> Matteo Panella (morph)<br />
+<strong>Licenza:</strong> GPLv2</p>
+
+<h2 id="feature-principali">Feature principali</h2>
+
+<ul>
+  <li>Registrazione e gestione di nickname e canali e relative liste di operatori</li>
+  <li>Servizi di memorandum</li>
+  <li>Controllo automatico cloni</li>
+  <li>Gestione AKILL, QLINE, GLINE, ecc.</li>
+  <li>Supporto nativo dell’usermode +x di Azzurra</li>
+  <li>Supporto multi-lingua</li>
+  <li>Protezione interna da flood e registrazioni di massa</li>
+  <li>Autenticazione della email di registrazione del nickname necessaria in modo da
+poter garantire un sicuro recupero delle password di nick e canali</li>
+  <li>Eliminazione automatica di quei nick registrati ma non autorizzati</li>
+  <li>Flag AutoOP/AutoHalfOP/AutoVoice per i canali che permettono di assegnare lo status
+di operatore o di voice a tutti gli utenti del canale senza dover inserire mask
+generiche nelle liste xOP</li>
+  <li>Protezioni contro desynch di rete</li>
+  <li>Supporto Services Agents esterni</li>
+  <li>News e welcome-message</li>
+</ul>
+
+<h2>Download</h2>
+<ul class="icons">
+  <li>
+    <i class="icon-download-alt"></i><a href="/downloads/services-2.2.2.tar.gz">services-2.2.2.tar.gz</a>
+    <ul class="icons">
+      <li>
+        <strong>MD5:</strong>
+        <code>02aaab20ac9bd22af803442d3ddfbe34</code>
+      </li>
+      <li>
+        <strong>SHA1:</strong>
+        <code>e5f072795fc5fac76755fb4d8049817e2ccfed34</code>
+      </li>
+      <li>
+        <strong>Tag:</strong>
+        <a href="https://github.com/azzurra/services/tree/services-2.2.2">services-2.2.2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <i class="icon-download-alt"></i><a href="/downloads/services-2.2.0.tar.gz">services-2.2.0.tar.gz</a>
+    <ul class="icons">
+      <li>
+        <strong>MD5:</strong>
+        <code>976e68a409caa014704e9fb44bccec8b</code>
+      </li>
+      <li>
+        <strong>SHA1:</strong>
+        <code>11595fdb92094c8414a4d55964110f0ed51615b8</code>
+      </li>
+      <li>
+        <strong>Commit:</strong>
+        <a href="https://github.com/azzurra/services/commit/6e4d79b0d38a211281f0ee42d18b2b752a0e6014">6e4d79b0d38a211281f0ee42d18b2b752a0e6014</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Documentazione</h2>
+<ul>
+  <li><a href="/services/changelog/">Azzurra Services - Changelog</a></li>
+</ul>
+      </section>
+      <div class='row-fluid'>
+        <hr>
+        <footer>
+          &copy;
+          <a href='http://www.azzurra.org'>Azzurra IRC Network</a>
+          &mdash; Contenuto concesso in licenza
+          <a href='https://www.gnu.org/licenses/fdl-1.3.html' target='_blank'>GFDL 1.3</a>
+        </footer>
+      </div>
+    </div>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='/js/bootstrap.min.js'></script>
+    <script src='/js/cse_branding.js'></script>
+  </body>
+</html>
