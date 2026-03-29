@@ -28,7 +28,3 @@ Quando ti connetti e vieni bannato, il client IRC mostra un messaggio simile a:
 ```
 
 Copia questo messaggio completo e includilo nella tua richiesta.
-
-## Contatti
-
-Entra su `#IRCHelp` via [webchat](https://webchat.azzurra.chat) (anche se bannato potresti riuscire ad accedere da un indirizzo IP diverso, ad esempio via mobile) oppure usa la pagina [Contatti](/contatti).
