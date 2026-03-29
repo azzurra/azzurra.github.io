@@ -103,3 +103,7 @@ theme        = "azzurra"
   weight = 4
   [menus.footer.params]
     col = "info"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
