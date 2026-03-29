@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+</div>
+
+<main class="site-main">
+  <div class="breadcrumb">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    {{ if .Parent }}
+    <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+    <span class="breadcrumb-sep">›</span>
+    {{ end }}
+    <span>{{ .Title }}</span>
+  </div>
+
+  {{ if eq .Section "news" }}
+  <!-- News post -->
+  <article>
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-date">{{ .Date.Format "02 January 2006" }}</span>
+        {{ with .Params.author }}<span class="post-date">di {{ . }}</span>{{ end }}
+        {{ with .Params.tags }}{{ range first 1 . }}
+        <span class="post-tag">{{ . }}</span>
+        {{ end }}{{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+  </article>
+  {{ else }}
+  <!-- Static page -->
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+  {{ end }}
+</main>
+
+{{ end }}

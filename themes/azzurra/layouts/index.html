@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<!-- Home Hero -->
+<section class="home-hero">
+  <div class="badge">🟢 Online dal 1997</div>
+  <h1>La Community IRC<br>Italiana</h1>
+  <p class="subtitle">Azzurra è la più longeva rete IRC italiana. Entra in migliaia di canali, parla con la community, fai nuove amicizie.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">
+      💬 Connettiti ora
+    </a>
+    <a class="btn btn-secondary" href="{{ "/come-connettersi" | relURL }}">Come connettersi</a>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-bar">
+  {{ range .Site.Params.stats }}
+  <div class="stat-item">
+    <span class="stat-value">{{ .value }}</span>
+    <span class="stat-label">{{ .label }}</span>
+  </div>
+  {{ end }}
+</div>
+
+<!-- News -->
+<main class="site-main">
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-title">📰 Ultime notizie</span>
+      <a class="section-link" href="{{ "/news" | relURL }}">Archivio news →</a>
+    </div>
+
+    {{ $posts := where .Site.RegularPages "Section" "news" }}
+    {{ range first 5 ($posts.ByDate.Reverse) }}
+    <article class="post-card">
+      <div class="post-meta">
+        <span class="post-date">{{ .Date.Format "02 January 2006" }}</span>
+        {{ with .Params.tags }}{{ range first 1 . }}
+        <span class="post-tag">{{ . }}</span>
+        {{ end }}{{ end }}
+      </div>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary | plainify | truncate 200 }}</p>
+      <a class="read-more" href="{{ .Permalink }}">Leggi tutto →</a>
+    </article>
+    {{ else }}
+    <p style="color:var(--text-muted)">Nessuna notizia disponibile.</p>
+    {{ end }}
+  </section>
+
+  <!-- Connect CTA -->
+  <div class="connect-cta">
+    <h3>Pronto a connetterti?</h3>
+    <p>Usa il tuo client IRC preferito oppure accedi direttamente dal browser.</p>
+    <code>irc.azzurra.chat:6667 &nbsp;|&nbsp; SSL: 6697</code>
+    <br>
+    <a class="btn btn-primary" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">Apri Web Chat</a>
+  </div>
+</main>
+
+{{ end }}

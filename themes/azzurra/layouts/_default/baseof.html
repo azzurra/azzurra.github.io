@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "it" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . | relURL }}">{{ end }}
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="{{ "/" | relURL }}">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">
+          <span class="logo-name">Azzurra</span>
+          <span class="logo-sub">IRC Network</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+        <a class="nav-cta" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">Web Chat ↗</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  {{ block "main" . }}{{ end }}
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Azzurra IRC Network</div>
+        <p>La prima community IRC italiana, dal 1997.<br>
+        Connettiti su <code style="background:hsl(207.3, 45.8%, 90.6%);border:none;color:var(--accent);padding:0;font-family:var(--font-mono)">irc.azzurra.chat</code> porta 6667 (SSL: 6697).</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Rete</h4>
+          {{ range where .Site.Menus.footer "Params.col" "rete" }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+        <div class="footer-col">
+          <h4>Informazioni</h4>
+          {{ range where .Site.Menus.footer "Params.col" "info" }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1997–{{ now.Year }} Azzurra IRC Network. Tutti i diritti riservati.</span>
+      <span>Staff: <a href="mailto:hypnotize@azzurra.chat">Hypnotize</a> · <a href="mailto:sonic@azzurra.chat">Sonic</a> · <a href="mailto:joep@azzurra.chat">joep</a> · <a href="mailto:mezmerize@azzurra.chat">Mezmerize</a> · <a href="mailto:scorpion@azzurra.chat">Scorpion</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('site-nav');
+    toggle?.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
