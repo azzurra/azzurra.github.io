@@ -56,7 +56,7 @@ Entra nel canale con `/join #nomedelcanale`. Se il canale non esiste, verrà cre
 ### Come registro un canale con ChanServ?
 
 ```
-/msg ChanServ REGISTER #nomedelcanale
+/msg ChanServ REGISTER #nomedelcanale password descrizione
 ```
 
 Devi essere operatore del canale (avere il flag `@`) per registrarlo.
