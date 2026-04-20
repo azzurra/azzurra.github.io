@@ -29,16 +29,6 @@ Il flusso è in **due passaggi** e richiede che un services operator esegua per 
 - La password precedente **non è necessaria** — lo scopo del comando è proprio recuperare l'accesso senza conoscerla.
 - Il codice è monouso e ha una scadenza; se scade, basta richiedere un nuovo SENDPASS.
 
-## Annullare un reset in corso
-
-Se per qualsiasi motivo vuoi annullare un reset password già richiesto (ad esempio hai cambiato idea o il codice è finito nelle mani sbagliate), uno services operator può eseguire:
-
-```
-/ns AUTHRESET <nick> RESETPASS
-```
-
-che pulisce lo stato di reset pendente **senza toccare e-mail e password** registrate.
-
 ## Come si chiede un reset
 
 Se hai perso la password e hai ancora accesso all'e-mail registrata, scrivi in `#IRCHelp` chiedendo a uno staffer di eseguire lo `SENDPASS` per il tuo nick. Ricevuto il codice via e-mail, procedi autonomamente con `RESETPASS`.
