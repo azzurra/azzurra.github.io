@@ -10,8 +10,8 @@ Siamo lieti di annunciare una **nuova funzionalità dei servizi**: il comando **
 
 Il flusso utente resta sostanzialmente lo stesso di prima — passi sempre da uno staffer in `#IRCHelp` — ma cambia la **meccanica dietro le quinte**, e cambia in meglio dal punto di vista della sicurezza:
 
-- **Prima:** lo staff faceva partire l'invio della tua password **in chiaro** alla tua e-mail registrata. Tu la usavi per identificarti e poi, eventualmente, la cambiavi a mano.
-- **Adesso:** lo staff fa partire l'invio di un **codice di autorizzazione monouso**. Tu lo usi insieme a una **nuova password scelta da te** per fare il reset. La tua password vecchia non viene mai recuperata, e la nuova non transita mai dalle mani dello staff.
+- **Prima:** lo staff lanciava un comando che faceva partire automaticamente una mail contenente la tua **password attuale in chiaro**. Tu la leggevi nella casella, la usavi per identificarti, e poi eventualmente la cambiavi a mano.
+- **Adesso:** lo staff lancia un comando che fa partire una mail con un **codice di autorizzazione monouso**. Tu lo usi insieme a una **nuova password scelta da te** per eseguire il reset. La tua password attuale non viene mai messa in mail, e quella nuova non passa mai per la mailbox.
 
 ## Come funziona
 
@@ -37,7 +37,9 @@ Se non hai più accesso all'e-mail registrata, il reset via codice non è possib
 
 ## Perché il cambiamento
 
-L'invio della password **in chiaro** via e-mail era una pratica che mostrava la sua età: una password recuperabile in chiaro è una password che, di fatto, lo staff è in grado di leggere prima di te, e che chiunque abbia accesso temporaneo alla tua casella di posta può estrarre senza nemmeno dover cambiare nulla. Spostare il flusso a un **codice di autorizzazione monouso** seguito da un reset scelto dall'utente elimina entrambi i problemi senza richiedere modifiche al modo in cui si chiede aiuto.
+L'invio della password **in chiaro** via e-mail era una pratica che mostrava la sua età. Quel messaggio rimaneva nella casella indefinitamente: chiunque ottenesse, anche solo temporaneamente, accesso alla tua mailbox poteva estrarre la tua password attiva — la password vera, quella che usavi davvero — senza dover toccare nulla.
+
+Sostituire la password con un **codice di autorizzazione monouso** chiude la finestra: il codice ha vita breve, brucia non appena viene usato per il reset, e non corrisponde mai alla tua password effettiva. La nuova password la scegli tu in quel momento, e non transita mai per nessuna mailbox.
 
 ---
 
