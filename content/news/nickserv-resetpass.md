@@ -3,16 +3,19 @@ title: "NickServ: nuovo comando RESETPASS per recuperare la password"
 date: 2026-04-20
 author: "Staff Azzurra"
 tags: ["annuncio", "services", "nickserv"]
-summary: "Chi ha dimenticato la password del nick e ha un'e-mail registrata valida può ora reimpostarla autonomamente, ricevendo un codice di autorizzazione via e-mail."
+summary: "Recuperare un nick con password dimenticata non implica più ricevere la password in chiaro via e-mail: ora arriva un codice monouso e la nuova password la scegli tu."
 ---
 
 Siamo lieti di annunciare una **nuova funzionalità dei servizi**: il comando **RESETPASS** di NickServ, che permette di reimpostare la password del proprio nick quando la si è dimenticata — a patto di avere un'**e-mail registrata valida**.
 
-Fino ad oggi l'unico modo per recuperare un nick con password persa era passare dallo staff e farsi resettare la password manualmente. Da adesso il reset è **basato sull'e-mail registrata** e affidato all'utente: la nuova password la scegli tu, lo staff non la vede mai.
+Il flusso utente resta sostanzialmente lo stesso di prima — passi sempre da uno staffer in `#IRCHelp` — ma cambia la **meccanica dietro le quinte**, e cambia in meglio dal punto di vista della sicurezza:
+
+- **Prima:** lo staff faceva partire l'invio della tua password **in chiaro** alla tua e-mail registrata. Tu la usavi per identificarti e poi, eventualmente, la cambiavi a mano.
+- **Adesso:** lo staff fa partire l'invio di un **codice di autorizzazione monouso**. Tu lo usi insieme a una **nuova password scelta da te** per fare il reset. La tua password vecchia non viene mai recuperata, e la nuova non transita mai dalle mani dello staff.
 
 ## Come funziona
 
-1. **Chiedi il codice in `#IRCHelp`**: uno staffer farà partire l'invio del **codice di autorizzazione** monouso alla tua e-mail registrata. Questo passaggio è mediato dallo staff per evitare abusi automatizzati.
+1. **Chiedi il reset in `#IRCHelp`**: uno staffer farà partire l'invio alla tua e-mail registrata di un **codice di autorizzazione** monouso (il passaggio è mediato dallo staff per evitare abusi automatizzati).
 2. **Controlla la tua casella e-mail** e copia il codice ricevuto.
 3. **Esegui RESETPASS** scegliendo tu la nuova password:
 
@@ -31,6 +34,10 @@ Fino ad oggi l'unico modo per recuperare un nick con password persa era passare 
 ## Se non hai più l'e-mail
 
 Se non hai più accesso all'e-mail registrata, il reset via codice non è possibile: in quel caso resta valida la procedura manuale tramite staff.
+
+## Perché il cambiamento
+
+L'invio della password **in chiaro** via e-mail era una pratica che mostrava la sua età: una password recuperabile in chiaro è una password che, di fatto, lo staff è in grado di leggere prima di te, e che chiunque abbia accesso temporaneo alla tua casella di posta può estrarre senza nemmeno dover cambiare nulla. Spostare il flusso a un **codice di autorizzazione monouso** seguito da un reset scelto dall'utente elimina entrambi i problemi senza richiedere modifiche al modo in cui si chiede aiuto.
 
 ---
 
