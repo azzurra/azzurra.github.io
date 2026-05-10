@@ -12,15 +12,47 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Verify every content/*.md has its language counterpart
+      - name: Verify every content/*.md touched in this PR has its language counterpart
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
+
+          # Delta-based parity gate — mirrors .githooks/pre-commit. We only
+          # block when THIS PR adds or modifies a content/*.md whose
+          # language counterpart is missing from the resulting tree.
+          # Skipping the unchanged backlog lets the i18n work land
+          # incrementally (scaffold → content → aliases) without each PR
+          # having to ship a complete translation set.
+          if [[ -n "${BASE_SHA:-}" && -n "${HEAD_SHA:-}" ]]; then
+            range="$BASE_SHA..$HEAD_SHA"
+          else
+            # push event on master: compare against previous commit
+            range="HEAD^..HEAD"
+          fi
+
+          mapfile -t touched < <(
+            git diff --name-only --diff-filter=AMR "$range" \
+              | grep -E '^content/.*\.md$' || true
+          )
+
+          if [[ ${#touched[@]} -eq 0 ]]; then
+            echo "✓ no content/*.md touched in this range — parity OK"
+            exit 0
+          fi
+
+          # Helper: file exists in resulting tree OR is also touched in this range.
+          have() {
+            [[ -f "$1" ]] && return 0
+            printf '%s\n' "${touched[@]}" | grep -qx "$1"
+          }
+
           missing=()
-          # Walk every content/*.md. Skip section indexes (Hugo allows IT-only
-          # _index.md). For everything else: enforce a sibling in the OTHER
-          # language. foo.md → foo.en.md and foo.en.md → foo.md.
-          while IFS= read -r f; do
+          for f in "${touched[@]}"; do
             base=$(basename "$f")
             [[ "$base" == _index.md ]] && continue
 
@@ -33,10 +65,8 @@ jobs:
               sibling="${dir}/${stem}.en.md"
             fi
 
-            if [[ ! -f "$sibling" ]]; then
-              missing+=("$f → expected $sibling")
-            fi
-          done < <(find content -type f -name '*.md' | sort)
+            have "$sibling" || missing+=("$f → expected $sibling")
+          done
 
           if [[ ${#missing[@]} -gt 0 ]]; then
             echo "::error::i18n parity broken — missing language counterparts:"
@@ -44,4 +74,4 @@ jobs:
             exit 1
           fi
 
-          echo "✓ i18n parity OK"
+          echo "✓ i18n parity OK (${#touched[@]} touched file(s) verified)"
