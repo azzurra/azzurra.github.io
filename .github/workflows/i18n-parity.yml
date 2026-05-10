@@ -2,9 +2,9 @@ name: i18n parity
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   parity:
@@ -13,28 +13,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify every content/*.md has a sibling .en.md
+      - name: Verify every content/*.md has its language counterpart
         run: |
           set -euo pipefail
           missing=()
-          # Find every .md under content/ that is NOT already an .en.md
-          # and NOT a section _index.md (those are allowed IT-only).
+          # Walk every content/*.md. Skip section indexes (Hugo allows IT-only
+          # _index.md). For everything else: enforce a sibling in the OTHER
+          # language. foo.md → foo.en.md and foo.en.md → foo.md.
           while IFS= read -r f; do
             base=$(basename "$f")
-            [[ "$base" == *.en.md ]] && continue
             [[ "$base" == _index.md ]] && continue
 
             dir=$(dirname "$f")
-            stem="${base%.md}"
-            en_path="${dir}/${stem}.en.md"
+            if [[ "$base" == *.en.md ]]; then
+              stem="${base%.en.md}"
+              sibling="${dir}/${stem}.md"
+            else
+              stem="${base%.md}"
+              sibling="${dir}/${stem}.en.md"
+            fi
 
-            if [[ ! -f "$en_path" ]]; then
-              missing+=("$f → expected $en_path")
+            if [[ ! -f "$sibling" ]]; then
+              missing+=("$f → expected $sibling")
             fi
           done < <(find content -type f -name '*.md' | sort)
 
           if [[ ${#missing[@]} -gt 0 ]]; then
-            echo "::error::i18n parity broken — missing English translations:"
+            echo "::error::i18n parity broken — missing language counterparts:"
             printf '  - %s\n' "${missing[@]}"
             exit 1
           fi
