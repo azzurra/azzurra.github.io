@@ -2,14 +2,14 @@
 
 <!-- Home Hero -->
 <section class="home-hero">
-  <div class="badge">🟢 Online dal 1997</div>
-  <h1>La Community IRC<br>Italiana</h1>
-  <p class="subtitle">Azzurra è la più longeva rete IRC italiana. Entra in migliaia di canali, parla con la community, fai nuove amicizie.</p>
+  <div class="badge">{{ i18n "heroBadge" }}</div>
+  <h1>{{ i18n "heroTitle" | safeHTML }}</h1>
+  <p class="subtitle">{{ i18n "heroSubtitle" }}</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">
-      💬 Connettiti ora
+      {{ i18n "heroCTAConnect" }}
     </a>
-    <a class="btn btn-secondary" href="{{ "/come-connettersi" | relURL }}">Come connettersi</a>
+    <a class="btn btn-secondary" href="{{ (index .Site.Menus.main 2).URL }}">{{ i18n "heroCTAHowto" }}</a>
   </div>
 </section>
 
@@ -27,35 +27,35 @@
 <main class="site-main">
   <section class="news-section">
     <div class="section-header">
-      <span class="section-title">📰 Ultime notizie</span>
-      <a class="section-link" href="{{ "/news" | relURL }}">Archivio news →</a>
+      <span class="section-title">{{ i18n "newsTitle" }}</span>
+      <a class="section-link" href="{{ "/news" | relLangURL }}">{{ i18n "newsArchive" }}</a>
     </div>
 
     {{ $posts := where .Site.RegularPages "Section" "news" }}
     {{ range first 5 ($posts.ByDate.Reverse) }}
     <article class="post-card">
       <div class="post-meta">
-        <span class="post-date">{{ .Date.Format "02 January 2006" }}</span>
+        <span class="post-date">{{ time.Format (i18n "dateFormat") .Date }}</span>
         {{ with .Params.tags }}{{ range first 1 . }}
         <span class="post-tag">{{ . }}</span>
         {{ end }}{{ end }}
       </div>
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <p>{{ .Summary | plainify | truncate 200 }}</p>
-      <a class="read-more" href="{{ .Permalink }}">Leggi tutto →</a>
+      <a class="read-more" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
     </article>
     {{ else }}
-    <p style="color:var(--text-muted)">Nessuna notizia disponibile.</p>
+    <p style="color:var(--text-muted)">{{ i18n "newsEmpty" }}</p>
     {{ end }}
   </section>
 
   <!-- Connect CTA -->
   <div class="connect-cta">
-    <h3>Pronto a connetterti?</h3>
-    <p>Usa il tuo client IRC preferito oppure accedi direttamente dal browser.</p>
+    <h3>{{ i18n "ctaConnectTitle" }}</h3>
+    <p>{{ i18n "ctaConnectSubtitle" }}</p>
     <code>irc.azzurra.chat:6667 &nbsp;|&nbsp; SSL: 6697</code>
     <br>
-    <a class="btn btn-primary" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">Apri Web Chat</a>
+    <a class="btn btn-primary" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">{{ i18n "ctaConnectButton" }}</a>
   </div>
 </main>
 

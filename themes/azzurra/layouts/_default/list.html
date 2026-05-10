@@ -7,24 +7,24 @@
 
 <main class="site-main">
   <div class="breadcrumb">
-    <a href="{{ "/" | relURL }}">Home</a>
+    <a href="{{ "/" | relLangURL }}">{{ i18n "breadcrumbHome" }}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{{ .Title }}</span>
   </div>
 
-  <p class="post-list-meta">{{ len .Pages }} articoli in archivio</p>
+  <p class="post-list-meta">{{ i18n "archiveCount" (dict "Count" (len .Pages)) }}</p>
 
   {{ range .Pages.ByDate.Reverse }}
   <article class="post-card">
     <div class="post-meta">
-      <span class="post-date">{{ .Date.Format "02 January 2006" }}</span>
+      <span class="post-date">{{ time.Format (i18n "dateFormat") .Date }}</span>
       {{ with .Params.tags }}{{ range first 1 . }}
       <span class="post-tag">{{ . }}</span>
       {{ end }}{{ end }}
     </div>
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p>{{ .Summary | plainify | truncate 220 }}</p>
-    <a class="read-more" href="{{ .Permalink }}">Leggi tutto →</a>
+    <a class="read-more" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
   </article>
   {{ end }}
 

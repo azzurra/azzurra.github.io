@@ -1,0 +1,80 @@
+# Azzurra theme — English strings
+
+# Date format (used by time.Format with site language)
+[dateFormat]
+other = "January 02, 2006"
+
+# Header / nav
+[navWebChat]
+other = "Web Chat ↗"
+
+# Footer
+[footerNetworkColumn]
+other = "Network"
+
+[footerInfoColumn]
+other = "Information"
+
+[footerBrandTagline]
+other = "Italy's longest-running IRC community, since 1997."
+
+[footerConnectLine]
+other = "Connect at <code>irc.azzurra.chat</code> on port 6667 (SSL: 6697)."
+
+[footerCopyright]
+other = "© 1997–{{ .Year }} Azzurra IRC Network. All rights reserved."
+
+[footerStaffPrefix]
+other = "Staff:"
+
+# Home (index.html)
+[heroBadge]
+other = "🟢 Online since 1997"
+
+[heroTitle]
+other = "The Italian<br>IRC Community"
+
+[heroSubtitle]
+other = "Azzurra is Italy's longest-running IRC network. Join thousands of channels, talk to the community, make new friends."
+
+[heroCTAConnect]
+other = "💬 Connect now"
+
+[heroCTAHowto]
+other = "How to connect"
+
+[newsTitle]
+other = "📰 Latest news"
+
+[newsArchive]
+other = "News archive →"
+
+[newsEmpty]
+other = "No news available."
+
+[ctaConnectTitle]
+other = "Ready to connect?"
+
+[ctaConnectSubtitle]
+other = "Use your favorite IRC client, or jump in directly from the browser."
+
+[ctaConnectButton]
+other = "Open Web Chat"
+
+# List page
+[breadcrumbHome]
+other = "Home"
+
+[archiveCount]
+other = "{{ .Count }} articles in archive"
+
+[readMore]
+other = "Read more →"
+
+# Single (post)
+[postByPrefix]
+other = "by"
+
+# Shortcode
+[infoBoxDefaultTitle]
+other = "ℹ️ Note"

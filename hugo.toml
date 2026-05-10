@@ -1,109 +1,202 @@
-baseURL      = "https://azzurra.github.io"
-languageCode = "it-IT"
-title        = "Azzurra IRC Network"
-theme        = "azzurra"
+baseURL = "https://azzurra.github.io"
+title   = "Azzurra IRC Network"
+theme   = "azzurra"
+
+defaultContentLanguage         = "it"
+defaultContentLanguageInSubdir = false
 
 [pagination]
   pagerSize = 10
 
 [params]
-  description = "La prima e più longeva rete IRC italiana, dal 1997. Connettiti su irc.azzurra.chat."
-  webchatURL  = "https://webchat.azzurra.chat"
-
-  [[params.stats]]
-    value = "1997"
-    label = "Fondata"
-  [[params.stats]]
-    value = "27+"
-    label = "Anni online"
-  [[params.stats]]
-    value = "100+"
-    label = "Canali attivi"
-  [[params.stats]]
-    value = "24/7"
-    label = "Uptime"
-
-# Main navigation
-[[menus.main]]
-  name   = "Home"
-  url    = "/"
-  weight = 1
-
-[[menus.main]]
-  name   = "La Storia"
-  url    = "/storia"
-  weight = 2
-
-[[menus.main]]
-  name   = "Come Connettersi"
-  url    = "/come-connettersi"
-  weight = 3
-
-[[menus.main]]
-  name   = "Il Network"
-  url    = "/network"
-  weight = 4
-
-[[menus.main]]
-  name   = "FAQ"
-  url    = "/faq"
-  weight = 5
-
-[[menus.main]]
-  name   = "Contatti"
-  url    = "/contatti"
-  weight = 6
-
-# Footer menus
-[[menus.footer]]
-  name   = "Notizie"
-  url    = "/news"
-  weight = 1
-  [menus.footer.params]
-    col = "rete"
-
-[[menus.footer]]
-  name   = "I Server"
-  url    = "/network"
-  weight = 2
-  [menus.footer.params]
-    col = "rete"
-
-[[menus.footer]]
-  name   = "I Servizi"
-  url    = "/servizi"
-  weight = 3
-  [menus.footer.params]
-    col = "rete"
-
-[[menus.footer]]
-  name   = "La Storia"
-  url    = "/storia"
-  weight = 1
-  [menus.footer.params]
-    col = "info"
-
-[[menus.footer]]
-  name   = "Regolamento"
-  url    = "/regolamento"
-  weight = 2
-  [menus.footer.params]
-    col = "info"
-
-[[menus.footer]]
-  name   = "FAQ"
-  url    = "/faq"
-  weight = 3
-  [menus.footer.params]
-    col = "info"
-
-[[menus.footer]]
-  name   = "Contatti"
-  url    = "/contatti"
-  weight = 4
-  [menus.footer.params]
-    col = "info"
+  webchatURL = "https://webchat.azzurra.chat"
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+# ─────────────────────────────────────────────────────────────────────
+# Italian (default — served at /)
+# ─────────────────────────────────────────────────────────────────────
+[languages.it]
+  languageName = "Italiano"
+  languageCode = "it-IT"
+  contentDir   = "content/it"
+  weight       = 1
+
+  [languages.it.params]
+    description = "La prima e più longeva rete IRC italiana, dal 1997. Connettiti su irc.azzurra.chat."
+
+    [[languages.it.params.stats]]
+      value = "1997"
+      label = "Fondata"
+    [[languages.it.params.stats]]
+      value = "27+"
+      label = "Anni online"
+    [[languages.it.params.stats]]
+      value = "100+"
+      label = "Canali attivi"
+    [[languages.it.params.stats]]
+      value = "24/7"
+      label = "Uptime"
+
+  [[languages.it.menus.main]]
+    name   = "Home"
+    url    = "/"
+    weight = 1
+  [[languages.it.menus.main]]
+    name   = "La Storia"
+    url    = "/storia"
+    weight = 2
+  [[languages.it.menus.main]]
+    name   = "Come Connettersi"
+    url    = "/come-connettersi"
+    weight = 3
+  [[languages.it.menus.main]]
+    name   = "Il Network"
+    url    = "/network"
+    weight = 4
+  [[languages.it.menus.main]]
+    name   = "FAQ"
+    url    = "/faq"
+    weight = 5
+  [[languages.it.menus.main]]
+    name   = "Contatti"
+    url    = "/contatti"
+    weight = 6
+
+  [[languages.it.menus.footer]]
+    name   = "Notizie"
+    url    = "/news"
+    weight = 1
+    [languages.it.menus.footer.params]
+      col = "rete"
+  [[languages.it.menus.footer]]
+    name   = "I Server"
+    url    = "/network"
+    weight = 2
+    [languages.it.menus.footer.params]
+      col = "rete"
+  [[languages.it.menus.footer]]
+    name   = "I Servizi"
+    url    = "/servizi"
+    weight = 3
+    [languages.it.menus.footer.params]
+      col = "rete"
+  [[languages.it.menus.footer]]
+    name   = "La Storia"
+    url    = "/storia"
+    weight = 1
+    [languages.it.menus.footer.params]
+      col = "info"
+  [[languages.it.menus.footer]]
+    name   = "Regolamento"
+    url    = "/regolamento"
+    weight = 2
+    [languages.it.menus.footer.params]
+      col = "info"
+  [[languages.it.menus.footer]]
+    name   = "FAQ"
+    url    = "/faq"
+    weight = 3
+    [languages.it.menus.footer.params]
+      col = "info"
+  [[languages.it.menus.footer]]
+    name   = "Contatti"
+    url    = "/contatti"
+    weight = 4
+    [languages.it.menus.footer.params]
+      col = "info"
+
+# ─────────────────────────────────────────────────────────────────────
+# English (served at /en/)
+# ─────────────────────────────────────────────────────────────────────
+[languages.en]
+  languageName = "English"
+  languageCode = "en-US"
+  contentDir   = "content/en"
+  weight       = 2
+
+  [languages.en.params]
+    description = "Italy's longest-running IRC community, since 1997. Connect at irc.azzurra.chat."
+
+    [[languages.en.params.stats]]
+      value = "1997"
+      label = "Founded"
+    [[languages.en.params.stats]]
+      value = "27+"
+      label = "Years online"
+    [[languages.en.params.stats]]
+      value = "100+"
+      label = "Active channels"
+    [[languages.en.params.stats]]
+      value = "24/7"
+      label = "Uptime"
+
+  [[languages.en.menus.main]]
+    name   = "Home"
+    url    = "/en/"
+    weight = 1
+  [[languages.en.menus.main]]
+    name   = "History"
+    url    = "/en/history"
+    weight = 2
+  [[languages.en.menus.main]]
+    name   = "Connect"
+    url    = "/en/connect"
+    weight = 3
+  [[languages.en.menus.main]]
+    name   = "Network"
+    url    = "/en/network"
+    weight = 4
+  [[languages.en.menus.main]]
+    name   = "FAQ"
+    url    = "/en/faq"
+    weight = 5
+  [[languages.en.menus.main]]
+    name   = "Contact"
+    url    = "/en/contact"
+    weight = 6
+
+  [[languages.en.menus.footer]]
+    name   = "News"
+    url    = "/en/news"
+    weight = 1
+    [languages.en.menus.footer.params]
+      col = "rete"
+  [[languages.en.menus.footer]]
+    name   = "Servers"
+    url    = "/en/network"
+    weight = 2
+    [languages.en.menus.footer.params]
+      col = "rete"
+  [[languages.en.menus.footer]]
+    name   = "Services"
+    url    = "/en/services"
+    weight = 3
+    [languages.en.menus.footer.params]
+      col = "rete"
+  [[languages.en.menus.footer]]
+    name   = "History"
+    url    = "/en/history"
+    weight = 1
+    [languages.en.menus.footer.params]
+      col = "info"
+  [[languages.en.menus.footer]]
+    name   = "Rules"
+    url    = "/en/rules"
+    weight = 2
+    [languages.en.menus.footer.params]
+      col = "info"
+  [[languages.en.menus.footer]]
+    name   = "FAQ"
+    url    = "/en/faq"
+    weight = 3
+    [languages.en.menus.footer.params]
+      col = "info"
+  [[languages.en.menus.footer]]
+    name   = "Contact"
+    url    = "/en/contact"
+    weight = 4
+    [languages.en.menus.footer.params]
+      col = "info"

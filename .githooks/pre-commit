@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# i18n parity gate — block commits where the staged content/it/* and
+# content/en/* files don't pair up via translationKey.
+#
+# Dir-split layout: content/it/foo.md (Italian) and content/en/bar.md
+# (English) are paired via the `translationKey:` frontmatter field. Both
+# siblings must declare the same key. The hook scans the staged tree and
+# fails if a touched page lacks a key or its counterpart key is missing
+# from the OTHER language tree.
+#
+# Bypass for emergencies: git commit --no-verify (CI parity check is the
+# non-bypassable gate — see .github/workflows/i18n-parity.yml).
+
+set -euo pipefail
+
+# Files staged for commit (Added/Modified/Renamed), filtered to content/{it,en}/*.md
+mapfile -t staged < <(
+  git diff --cached --name-only --diff-filter=AMR \
+    | grep -E '^content/(it|en)/.*\.md$' || true
+)
+
+[[ ${#staged[@]} -eq 0 ]] && exit 0
+
+# extract_key <path>: print translationKey value, empty if missing.
+extract_key() {
+  awk '
+    /^---$/ { if (in_fm) exit; in_fm=1; next }
+    in_fm && /^translationKey:[[:space:]]*/ {
+      sub(/^translationKey:[[:space:]]*/, ""); gsub(/["'\''`]/, ""); print; exit
+    }
+  ' "$1"
+}
+
+# has_key_in <key> <lang>: 0 if any content/<lang>/**/*.md declares translationKey=<key>.
+has_key_in() {
+  local key="$1" lang="$2" f
+  [[ -d "content/$lang" ]] || return 1
+  while IFS= read -r f; do
+    [[ "$(extract_key "$f")" == "$key" ]] && return 0
+  done < <(find "content/$lang" -type f -name '*.md')
+  return 1
+}
+
+missing=()
+for f in "${staged[@]}"; do
+  key=$(extract_key "$f")
+  # No translationKey = page declares no pairing yet; pre-translation
+  # half-step is allowed (the gate only enforces well-formed pairs, it
+  # does not force every page to be translated).
+  [[ -z "$key" ]] && continue
+
+  case "$f" in
+    content/it/*) other="en" ;;
+    content/en/*) other="it" ;;
+    *) continue ;;
+  esac
+
+  has_key_in "$key" "$other" || \
+    missing+=("$f → translationKey '$key' missing in content/$other/")
+done
+
+if [[ ${#missing[@]} -gt 0 ]]; then
+  echo "✗ i18n parity check failed:" >&2
+  printf '  - %s\n' "${missing[@]}" >&2
+  echo "" >&2
+  echo "Fix: add the missing sibling under content/<other-lang>/ with the same" >&2
+  echo "translationKey, or run 'git commit --no-verify' if you are intentionally" >&2
+  echo "staging a half-step (the CI parity check will still gate the PR)." >&2
+  exit 1
+fi
+
+exit 0

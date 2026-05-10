@@ -1,4 +1,4 @@
 <div class="info-box">
-  <strong>{{ .Get "title" | default "ℹ️ Nota" }}</strong>
+  <strong>{{ .Get "title" | default (i18n "infoBoxDefaultTitle") }}</strong>
   {{ .Inner | markdownify }}
 </div>

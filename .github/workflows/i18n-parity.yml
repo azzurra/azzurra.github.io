@@ -1,0 +1,86 @@
+name: i18n parity
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  parity:
+    name: IT/EN parity check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify every content/{it,en}/*.md touched in this PR pairs via translationKey
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          # Delta-based parity gate — mirrors .githooks/pre-commit. Only
+          # files touched in THIS PR are checked. For each touched
+          # content/{it,en}/*.md the resulting tree must contain a
+          # counterpart in the OTHER language tree carrying the same
+          # `translationKey:` frontmatter value.
+          if [[ -n "${BASE_SHA:-}" && -n "${HEAD_SHA:-}" ]]; then
+            range="$BASE_SHA..$HEAD_SHA"
+          else
+            range="HEAD^..HEAD"
+          fi
+
+          mapfile -t touched < <(
+            git diff --name-only --diff-filter=AMR "$range" \
+              | grep -E '^content/(it|en)/.*\.md$' || true
+          )
+
+          if [[ ${#touched[@]} -eq 0 ]]; then
+            echo "✓ no content/{it,en}/*.md touched in this range — parity OK"
+            exit 0
+          fi
+
+          extract_key() {
+            awk '
+              /^---$/ { if (in_fm) exit; in_fm=1; next }
+              in_fm && /^translationKey:[[:space:]]*/ {
+                sub(/^translationKey:[[:space:]]*/, ""); gsub(/["'"'"'`]/, ""); print; exit
+              }
+            ' "$1"
+          }
+
+          has_key_in() {
+            local key="$1" lang="$2" f
+            [[ -d "content/$lang" ]] || return 1
+            while IFS= read -r f; do
+              [[ "$(extract_key "$f")" == "$key" ]] && return 0
+            done < <(find "content/$lang" -type f -name '*.md')
+            return 1
+          }
+
+          missing=()
+          for f in "${touched[@]}"; do
+            key=$(extract_key "$f")
+            # No translationKey = page declares no pairing yet.
+            [[ -z "$key" ]] && continue
+
+            case "$f" in
+              content/it/*) other="en" ;;
+              content/en/*) other="it" ;;
+              *) continue ;;
+            esac
+
+            has_key_in "$key" "$other" || \
+              missing+=("$f → translationKey '$key' missing in content/$other/")
+          done
+
+          if [[ ${#missing[@]} -gt 0 ]]; then
+            echo "::error::i18n parity broken:"
+            printf '  - %s\n' "${missing[@]}"
+            exit 1
+          fi
+
+          echo "✓ i18n parity OK (${#touched[@]} touched file(s) verified)"
