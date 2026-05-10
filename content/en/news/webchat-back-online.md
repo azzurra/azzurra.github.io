@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "webchat"]
 summary: "The Azzurra webchat is once again available at webchat.azzurra.chat with both IPv4 and IPv6 support."
 translationKey: news-webchat-operativa
+aliases: [/en/news/webchat-operativa/]
 ---
 We're glad to announce that the **Azzurra webchat is fully operational again**! 🎉
 

@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "network"]
 summary: "New homepage for www.azzurra.chat!"
 translationKey: news-nuovo-sito
+aliases: [/en/news/nuovo-sito/]
 ---
 
 We're thrilled to announce the launch of the **new Azzurra homepage** at `www.azzurra.chat`! 🎉

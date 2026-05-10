@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "network"]
 summary: "The Azzurra.org IRC network is being reorganised under the new Azzurra.chat domain, directly managed by the current staff."
 translationKey: news-azzurra-rinasce-come-azzurra-chat
+aliases: [/en/news/azzurra-rinasce-come-azzurra-chat/]
 ---
 
 We're glad to inform you that the **Azzurra.org** IRC network will soon be reorganised under the **Azzurra.chat** name. During this transition the website `www.azzurra.org` and the round-robin `irc.azzurra.org` will remain available.

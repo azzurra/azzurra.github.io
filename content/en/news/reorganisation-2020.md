@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "network"]
 summary: "Azzurra is starting a deep reorganisation to bring back all the network's historic services."
 translationKey: news-riorganizzazione-2020
+aliases: [/en/news/riorganizzazione-2020/]
 ---
 
 We're glad to let you know that a **network reorganisation** is under way, designed to bring back all the services Azzurra has always offered to its users.

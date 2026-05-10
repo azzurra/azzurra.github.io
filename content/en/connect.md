@@ -2,6 +2,7 @@
 title: "How to Connect"
 lead: "Everything you need to step into the world of Azzurra, in a few easy steps."
 translationKey: page-come-connettersi
+aliases: [/en/come-connettersi/]
 ---
 
 ## Quick connection via Web

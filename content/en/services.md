@@ -2,6 +2,7 @@
 title: "Services"
 lead: "The bots and services available on the Azzurra network for managing nicknames, channels and much more."
 translationKey: page-servizi
+aliases: [/en/servizi/]
 ---
 
 ## NickServ
