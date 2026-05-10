@@ -1,6 +1,7 @@
 ---
 title: "FAQ"
 lead: "Domande frequenti su Azzurra IRC Network."
+translationKey: page-faq
 ---
 
 ## Generali

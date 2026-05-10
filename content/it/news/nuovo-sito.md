@@ -4,6 +4,7 @@ date: 2026-03-29
 author: "Staff Azzurra"
 tags: ["annuncio", "rete"]
 summary: "Nuova homepage per www.azzurra.chat!"
+translationKey: news-nuovo-sito
 ---
 
 Siamo entusiasti di annunciare il lancio della **nuova homepage di Azzurra** su `www.azzurra.chat`! 🎉  

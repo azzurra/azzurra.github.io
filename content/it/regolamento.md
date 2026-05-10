@@ -1,6 +1,7 @@
 ---
 title: "Regolamento"
 lead: "Le regole della rete Azzurra IRC. La loro osservanza garantisce un ambiente sano per tutti."
+translationKey: page-regolamento
 ---
 
 ## Premessa

@@ -4,6 +4,7 @@ date: 2026-04-30
 author: "Staff Azzurra"
 tags: ["annuncio", "rete"]
 summary: "Introdotti nuovi server per ridondanza geografica! Entrano a far parte della flotta un nuovo hub e due differenti leaf."
+translationKey: news-nuovi-server-2026
 ---
 
 ## Espansione della Rete: Nuovi Server e Maggiore Affidabilità 🚀

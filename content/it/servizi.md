@@ -1,6 +1,7 @@
 ---
 title: "I Servizi"
 lead: "I bot e servizi disponibili sulla rete Azzurra per gestire nickname, canali e molto altro."
+translationKey: page-servizi
 ---
 
 ## NickServ
