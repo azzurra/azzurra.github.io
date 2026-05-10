@@ -27,6 +27,24 @@
         <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
         {{ end }}
         <a class="nav-cta" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">{{ i18n "navWebChat" }}</a>
+        <div class="lang-switcher" aria-label="{{ i18n "langSwitcherLabel" }}">
+          {{- $current := .Language.Lang -}}
+          {{- range .Site.Languages -}}
+            {{- $code := .Lang -}}
+            {{- $href := "" -}}
+            {{- with $.AllTranslations -}}
+              {{- range . -}}
+                {{- if eq .Language.Lang $code -}}{{- $href = .RelPermalink -}}{{- end -}}
+              {{- end -}}
+            {{- end -}}
+            {{- if not $href -}}{{- $href = printf "/%s/" $code | relURL -}}{{- end -}}
+            {{- if eq $code $current -}}
+              <span class="lang-current" aria-current="true">{{ upper $code }}</span>
+            {{- else -}}
+              <a class="lang-link" href="{{ $href }}" hreflang="{{ $code }}" rel="alternate">{{ upper $code }}</a>
+            {{- end -}}
+          {{- end -}}
+        </div>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu">

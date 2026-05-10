@@ -8,6 +8,9 @@ other = "02 January 2006"
 [navWebChat]
 other = "Web Chat ↗"
 
+[langSwitcherLabel]
+other = "Cambia lingua"
+
 # Footer
 [footerNetworkColumn]
 other = "Rete"
