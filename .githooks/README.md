@@ -17,8 +17,9 @@ events.
 ## What's here
 
 - **`pre-commit`** — i18n parity gate. Blocks any commit that adds/modifies a
-  `content/*.md` file without a matching `.en.md` sibling. Mirrors the
-  server-side `.github/workflows/i18n-parity.yml` check.
+  `content/it/*.md` or `content/en/*.md` page without a matching sibling in the
+  other language tree carrying the same `translationKey:` frontmatter value.
+  Mirrors the server-side `.github/workflows/i18n-parity.yml` check.
 
 ## Bypassing
 

@@ -4,7 +4,7 @@ date: 2026-05-10
 author: "Azzurra Staff"
 tags: ["announcement", "bot", "games"]
 summary: "Card games, poker, trivia and UNO right inside your channel: GameBot brings tabletop fun to Azzurra."
-slug: gamebot
+translationKey: news-gamebot
 ---
 
 ## A new companion in chat 🎲

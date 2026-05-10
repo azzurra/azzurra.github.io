@@ -4,6 +4,7 @@ date: 2026-05-10
 author: "Staff Azzurra"
 tags: ["annuncio", "bot", "giochi"]
 summary: "Sfide di carte, poker, quiz e UNO direttamente in canale: GameBot porta i giochi da tavolo su Azzurra."
+translationKey: news-gamebot
 ---
 
 ## Una nuova compagnia in chat 🎲
