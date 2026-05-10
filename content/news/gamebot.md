@@ -12,7 +12,7 @@ Siamo felici di presentare **GameBot**, il nuovo bot ufficiale di Azzurra dedica
 ## I giochi disponibili
 - 🃏 **Sette e Mezzo**: il classico gioco di carte italiano, dove fortuna e nervi saldi fanno la differenza. Avvicinati al sette e mezzo senza sballare.
 - ♠️ **Texas Hold'em**: il poker più diffuso al mondo, in versione canale. Bluff, raise e all-in tra amici, senza puntate reali ma con tutto l'ego in palio.
-- 🧠 **Trivia**: domande a raffica su cultura generale, cinema, musica, sport e tanto altro. Il più rapido vince.
+- 🧠 **Trivia**: domande a raffica su cultura generale, cinema, musica, sport e tanto altro.
 - 🎴 **UNO**: il gioco di carte che non ha bisogno di presentazioni. Pesca due, salta turno, cambia colore — e non dimenticarti mai di dichiarare "UNO!".
 
 ## Come iniziare a giocare
