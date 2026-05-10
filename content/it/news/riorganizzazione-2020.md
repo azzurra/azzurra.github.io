@@ -4,6 +4,7 @@ date: 2020-05-03
 author: "Staff Azzurra"
 tags: ["annuncio", "rete"]
 summary: "Azzurra avvia una profonda riorganizzazione per tornare a offrire tutti i servizi storici della rete."
+translationKey: news-riorganizzazione-2020
 ---
 
 Siamo lieti di comunicarvi che è in corso una **riorganizzazione del network** pensata per tornare ad offrire tutti i servizi che Azzurra ha sempre messo a disposizione della sua utenza.

@@ -1,6 +1,7 @@
 ---
 title: "Il Network"
 lead: "L'infrastruttura tecnica di Azzurra: server, servizi e architettura della rete."
+translationKey: page-network
 ---
 
 ## Architettura

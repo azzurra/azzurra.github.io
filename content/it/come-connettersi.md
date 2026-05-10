@@ -1,6 +1,7 @@
 ---
 title: "Come Connettersi"
 lead: "Tutto ciò che ti serve per entrare nel mondo di Azzurra, in pochi passi."
+translationKey: page-come-connettersi
 ---
 
 ## Connessione rapida via Web

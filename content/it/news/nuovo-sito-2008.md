@@ -4,6 +4,7 @@ date: 2008-05-29
 author: "Staff Azzurra"
 tags: ["annuncio", "sito"]
 summary: "Presentazione del nuovo sito web di Azzurra con grafica rinnovata, nuova ChanList e ChanStats."
+translationKey: news-nuovo-sito-2008
 ---
 
 Siamo felici di poter presentare il **nuovo sito web di Azzurra**.

@@ -1,6 +1,7 @@
 ---
 title: "Richiesta Rimozione K-Line"
 lead: "Il tuo IP è stato bannato dalla rete? Compila questo modulo per richiedere la rimozione."
+translationKey: page-kline
 ---
 
 ## Cos'è una K-Line?

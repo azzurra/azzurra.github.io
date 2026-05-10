@@ -4,6 +4,7 @@ date: 2026-04-20
 author: "Staff Azzurra"
 tags: ["annuncio", "services", "nickserv"]
 summary: "Chi ha dimenticato la password del nick e ha un'e-mail registrata valida può ora resettarla in autonomia tramite un codice di autorizzazione inviato via e-mail."
+translationKey: news-nickserv-resetpass
 ---
 
 Siamo lieti di annunciare una **nuova funzionalità dei servizi**: il comando **RESETPASS** di NickServ, che permette di reimpostare la password del proprio nick quando la si è dimenticata — a patto di avere un'**e-mail registrata valida**.

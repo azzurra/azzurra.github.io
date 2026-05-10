@@ -1,6 +1,7 @@
 ---
 title: "Contatti"
 lead: "Come raggiungere lo staff di Azzurra IRC Network."
+translationKey: page-contatti
 ---
 
 ## Canali IRC

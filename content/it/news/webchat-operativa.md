@@ -4,6 +4,7 @@ date: 2026-04-02
 author: "Staff Azzurra"
 tags: ["annuncio", "webchat"]
 summary: "La webchat di Azzurra è nuovamente disponibile su webchat.azzurra.chat con supporto IPv4 e IPv6."
+translationKey: news-webchat-operativa
 ---
 Siamo lieti di annunciare che la **webchat di Azzurra è tornata pienamente operativa**! 🎉
 

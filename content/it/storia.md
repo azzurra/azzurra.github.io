@@ -1,6 +1,7 @@
 ---
 title: "La Storia di Azzurra"
 lead: "Dalle origini del 1997 ad oggi: come è nata e cresciuta la più longeva rete IRC italiana."
+translationKey: page-storia
 ---
 
 ## Le origini (1997)

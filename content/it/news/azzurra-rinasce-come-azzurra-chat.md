@@ -4,6 +4,7 @@ date: 2024-06-08
 author: "Staff Azzurra"
 tags: ["annuncio", "rete"]
 summary: "La rete IRC Azzurra.org viene riorganizzata sotto il nuovo dominio Azzurra.chat, con gestione diretta da parte dello staff attuale."
+translationKey: news-azzurra-rinasce-come-azzurra-chat
 ---
 
 Siamo lieti di informarvi che la rete IRC **Azzurra.org** verrà presto riorganizzata sotto il nome **Azzurra.chat**. In questa fase transitoria rimarranno disponibili il sito web `www.azzurra.org` ed il round robin `irc.azzurra.org`.
