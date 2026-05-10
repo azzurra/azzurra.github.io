@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# i18n parity gate — block commits that add/modify an IT content file
+# without a matching .en.md sibling.
+#
+# Pairing rule: foo.md (Italian, no language suffix) requires foo.en.md.
+# Excluded: hidden/dot files, _index.md (treated as section index, optional EN),
+# anything already a .en.md, anything outside content/.
+#
+# Bypass for emergencies: git commit --no-verify (CI parity check is the
+# non-bypassable gate — see .github/workflows/i18n-parity.yml).
+
+set -euo pipefail
+
+# Files staged for commit (Added/Modified/Renamed), filtered to content/*.md
+mapfile -t staged < <(
+  git diff --cached --name-only --diff-filter=AMR \
+    | grep -E '^content/.*\.md$' || true
+)
+
+[[ ${#staged[@]} -eq 0 ]] && exit 0
+
+missing=()
+for f in "${staged[@]}"; do
+  base=$(basename "$f")
+
+  # Skip already-EN files
+  [[ "$base" == *.en.md ]] && continue
+
+  # Skip section indexes (Hugo accepts IT-only _index.md)
+  [[ "$base" == _index.md ]] && continue
+
+  dir=$(dirname "$f")
+  stem="${base%.md}"
+  en_path="${dir}/${stem}.en.md"
+
+  # Either the .en.md exists in the working tree OR is also being staged
+  if [[ ! -f "$en_path" ]] && ! printf '%s\n' "${staged[@]}" | grep -qx "$en_path"; then
+    missing+=("$f → expected $en_path")
+  fi
+done
+
+if [[ ${#missing[@]} -gt 0 ]]; then
+  echo "✗ i18n parity check failed: missing English translations" >&2
+  printf '  - %s\n' "${missing[@]}" >&2
+  echo >&2
+  echo "Add the matching .en.md file(s) before committing." >&2
+  echo "Bypass (last resort): git commit --no-verify" >&2
+  exit 1
+fi
+
+exit 0

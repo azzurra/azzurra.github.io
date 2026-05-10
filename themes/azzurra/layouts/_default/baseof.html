@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="header-inner">
 
-      <a class="site-logo" href="{{ "/" | relURL }}">
+      <a class="site-logo" href="{{ "/" | relLangURL }}">
         <img class="logo-img" src="{{ "/img/logo.png" | relURL }}" alt="Azzurra IRC Network Logo">
       </a>
 
@@ -26,7 +26,7 @@
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
         {{ end }}
-        <a class="nav-cta" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">Web Chat ↗</a>
+        <a class="nav-cta" href="{{ .Site.Params.webchatURL | default "https://webchat.azzurra.chat" }}" target="_blank" rel="noopener">{{ i18n "navWebChat" }}</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
@@ -44,18 +44,18 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">Azzurra IRC Network</div>
-        <p>La prima community IRC italiana, dal 1997.<br>
-        Connettiti su <code style="background:hsl(207.3, 45.8%, 90.6%);border:none;color:var(--accent);padding:0;font-family:var(--font-mono)">irc.azzurra.chat</code> porta 6667 (SSL: 6697).</p>
+        <p>{{ i18n "footerBrandTagline" }}<br>
+        {{ i18n "footerConnectLine" | safeHTML }}</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Rete</h4>
+          <h4>{{ i18n "footerNetworkColumn" }}</h4>
           {{ range where .Site.Menus.footer "Params.col" "rete" }}
           <a href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         </div>
         <div class="footer-col">
-          <h4>Informazioni</h4>
+          <h4>{{ i18n "footerInfoColumn" }}</h4>
           {{ range where .Site.Menus.footer "Params.col" "info" }}
           <a href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
@@ -63,8 +63,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 1997–{{ now.Year }} Azzurra IRC Network. Tutti i diritti riservati.</span>
-      <span>Staff: <a href="mailto:hypnotize@azzurra.chat">Hypnotize</a> · <a href="mailto:sonic@azzurra.chat">Sonic</a> · <a href="mailto:joep@azzurra.chat">joep</a> · <a href="mailto:mezmerize@azzurra.chat">Mezmerize</a> · <a href="mailto:scorpion@azzurra.chat">Scorpion</a></span>
+      <span>{{ i18n "footerCopyright" (dict "Year" now.Year) }}</span>
+      <span>{{ i18n "footerStaffPrefix" }} <a href="mailto:hypnotize@azzurra.chat">Hypnotize</a> · <a href="mailto:sonic@azzurra.chat">Sonic</a> · <a href="mailto:joep@azzurra.chat">joep</a> · <a href="mailto:mezmerize@azzurra.chat">Mezmerize</a> · <a href="mailto:scorpion@azzurra.chat">Scorpion</a></span>
     </div>
   </footer>
 
@@ -76,4 +76,3 @@
 
 </body>
 </html>
-
