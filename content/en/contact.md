@@ -2,6 +2,7 @@
 title: "Contact"
 lead: "How to reach the Azzurra IRC Network staff."
 translationKey: page-contatti
+aliases: [/en/contatti/]
 ---
 
 ## IRC channels

@@ -2,6 +2,7 @@
 title: "The Story of Azzurra"
 lead: "From the origins in 1997 to today: how Italy's longest-running IRC network was born and grew."
 translationKey: page-storia
+aliases: [/en/storia/]
 ---
 
 ## The origins (1997)

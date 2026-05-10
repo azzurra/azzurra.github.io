@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "website"]
 summary: "Announcing the new Azzurra website with a refreshed look, a new ChanList and ChanStats."
 translationKey: news-nuovo-sito-2008
+aliases: [/en/news/nuovo-sito-2008/]
 ---
 
 We're glad to announce the **new Azzurra website**.

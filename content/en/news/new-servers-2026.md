@@ -5,6 +5,7 @@ author: "Azzurra Staff"
 tags: ["announcement", "network"]
 summary: "New servers introduced for geographic redundancy! A new hub and two new leaves join the fleet."
 translationKey: news-nuovi-server-2026
+aliases: [/en/news/nuovi-server-2026/]
 ---
 
 ## Network expansion: new servers and higher reliability 🚀

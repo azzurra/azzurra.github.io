@@ -2,6 +2,7 @@
 title: "Rules"
 lead: "The rules of the Azzurra IRC network. Following them keeps the environment healthy for everyone."
 translationKey: page-regolamento
+aliases: [/en/regolamento/]
 ---
 
 ## Foreword
