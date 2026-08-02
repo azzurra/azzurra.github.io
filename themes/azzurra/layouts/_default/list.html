@@ -23,7 +23,7 @@
       {{ end }}{{ end }}
     </div>
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Summary | plainify | truncate 220 }}</p>
+    <p>{{ .Summary | plainify | htmlUnescape | truncate 220 }}</p>
     <a class="read-more" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
   </article>
   {{ end }}
