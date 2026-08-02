@@ -41,7 +41,7 @@
         {{ end }}{{ end }}
       </div>
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <p>{{ .Summary | plainify | truncate 200 }}</p>
+      <p>{{ .Summary | plainify | htmlUnescape | truncate 200 }}</p>
       <a class="read-more" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
     </article>
     {{ else }}
