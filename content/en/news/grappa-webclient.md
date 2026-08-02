@@ -18,6 +18,8 @@ Here's **one more way** to reach Azzurra from your browser: **Grappa**, a web IR
 * 🔌 **You stay connected.** Close the window, turn off your phone, come back later: the connection to Azzurra stays up, and you pick the conversation up where you left it.
 * 📱💻 **The same chat on every device.** Open Grappa on your phone, laptop or desktop: it's always your own session, kept in sync.
 * ⚡ **Installs without downloading anything.** On both phone and computer it can be added like a regular app, straight from the browser.
+* 🔔 **Push notifications, if you want them.** Even with the window closed it tells you when someone messages you privately or mentions you in a channel; you decide what earns one — mentions only, a whole channel, or nothing at all.
+* 🎨 **Pick your own colours.** There's a gallery of themes, each with a light and a dark variant, plus an editor to build your own.
 * 🔑 **Guided nickname registration.** A step-by-step flow walks you through registering; after that you log in from any device with your nickname and password.
 * 🚪 **And if you'd rather not set a password**, you just join with your nickname, the way you always have.
 
