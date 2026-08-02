@@ -18,6 +18,8 @@ Segnaliamo agli utenti una **possibilità in più** per collegarsi ad Azzurra da
 * 🔌 **Resti sempre connesso.** Chiudi la finestra, spegni il telefono, torna dopo: la connessione ad Azzurra rimane su, e quando rientri ritrovi la conversazione dov'era.
 * 📱💻 **Stessa chat su tutti i dispositivi.** Apri Grappa dal telefono, dal portatile o dal fisso: è sempre la tua sessione, sincronizzata.
 * ⚡ **Si installa senza scaricare niente.** Su telefono e su PC si aggiunge come un'app normale, direttamente dal browser.
+* 🔔 **Notifiche push, se le vuoi.** Anche a finestra chiusa ti avvisa quando ti scrivono in privato o ti nominano in canale; decidi tu cosa merita una notifica — solo le menzioni, un canale intero, o niente del tutto.
+* 🎨 **I colori te li scegli tu.** C'è una galleria di temi, ognuno con la sua versione chiara e scura, più un editor per farsene uno su misura.
 * 🔑 **Registrazione del nick guidata.** Una procedura passo-passo ti accompagna nella registrazione; da lì in poi entri da qualunque dispositivo con nick e password.
 * 🚪 **E se non vuoi una password**, entri semplicemente col nick, come hai sempre fatto.
 
