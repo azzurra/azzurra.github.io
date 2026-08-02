@@ -19,8 +19,8 @@ defaultContentLanguageInSubdir = false
 # Italian (default — served at /)
 # ─────────────────────────────────────────────────────────────────────
 [languages.it]
-  languageName = "Italiano"
-  languageCode = "it-IT"
+  label        = "Italiano"
+  locale       = "it-IT"
   contentDir   = "content/it"
   weight       = 1
 
@@ -112,8 +112,8 @@ defaultContentLanguageInSubdir = false
 # English (served at /en/)
 # ─────────────────────────────────────────────────────────────────────
 [languages.en]
-  languageName = "English"
-  languageCode = "en-US"
+  label        = "English"
+  locale       = "en-US"
   contentDir   = "content/en"
   weight       = 2
 
