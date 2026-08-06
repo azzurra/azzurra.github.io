@@ -107,6 +107,12 @@ defaultContentLanguageInSubdir = false
     weight = 4
     [languages.it.menus.footer.params]
       col = "info"
+  [[languages.it.menus.footer]]
+    name   = "Privacy"
+    url    = "/privacy"
+    weight = 5
+    [languages.it.menus.footer.params]
+      col = "info"
 
 # ─────────────────────────────────────────────────────────────────────
 # English (served at /en/)
@@ -198,5 +204,11 @@ defaultContentLanguageInSubdir = false
     name   = "Contact"
     url    = "/en/contact"
     weight = 4
+    [languages.en.menus.footer.params]
+      col = "info"
+  [[languages.en.menus.footer]]
+    name   = "Privacy"
+    url    = "/en/privacy"
+    weight = 5
     [languages.en.menus.footer.params]
       col = "info"
