@@ -81,6 +81,6 @@ Data associated with a NickServ account (email, settings) is retained as long as
 
 ---
 
-Policy last updated on 06.08.2026
+Policy last updated on 13.08.2026
 
 *This English text is a courtesy translation. In case of discrepancy, the Italian version prevails.*

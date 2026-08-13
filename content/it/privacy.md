@@ -81,4 +81,4 @@ I dati associati a un account NickServ (email, impostazioni) vengono conservati 
 
 ---
 
-Informativa aggiornata al 06.08.2026
+Informativa aggiornata al 13.08.2026
