@@ -81,3 +81,9 @@ other = "di"
 # Shortcode
 [infoBoxDefaultTitle]
 other = "ℹ️ Nota"
+
+# IRC Help
+[ircHelpFilter]
+other = "Cerca un comando…"
+[ircHelpNoMatch]
+other = "Nessun comando trovato."
