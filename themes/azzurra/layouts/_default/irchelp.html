@@ -61,6 +61,13 @@
   }
   if (!panels.length) return;
 
+  // One command open at a time: opening a <details> closes the others.
+  // "toggle" does not bubble, hence the capture listener.
+  root.addEventListener('toggle', (e) => {
+    if (!e.target.open) return;
+    for (const d of root.querySelectorAll('details[open]')) if (d !== e.target) d.open = false;
+  }, true);
+
   // The "- **ACC** - ..." list at the top of each service is its index:
   // link every bold command name to the matching <details>.
   for (const p of panels) {

@@ -2397,23 +2397,12 @@ The **j** mode is not currently supported by services.
 /mode #irchelp +b        (per vedere i ban impostati)
 ```
 
-## Miscellaneous
+## Server commands
 
-A brief guide explaining how to solve some of the most common problems users may encounter.
+The user commands of Azzurra's IRC server (Bahamut): open the command you need.
 
-- [IRC Commands](#bahamut---user-commands) – The user commands of Azzurra's IRC daemon
-- [Help Ident](#help-ident) - A misconfigured Ident may prevent connecting
-- [Help DCC](#help-dcc) - Some file transfers may be blocked by the server
-- [Recognition masks](#recognition-masks-on-irc) – What masks are for and how they are determined
-- [Azzurra details](#azzurra-irc-network-details) – Network particulars
-- [Azzurra's Servers](#azzurras-servers) – Linked servers and addresses
-- [Useful links](#useful-links) – Help and information about Azzurra
 
-For more information, once connected to the network type: `/join #IRCHelp`
-
-### Bahamut - User Commands
-
-#### ADMIN
+### ADMIN
 
 Provides administrative information about the server. If **dest** is specified, the reply will be provided by the indicated server: a nick or a server address can be specified.
 
@@ -2431,7 +2420,7 @@ Provides administrative information about the server. If **dest** is specified, 
 /ADMIN cheapnet*
 ```
 
-#### AWAY
+### AWAY
 
 If a **message** is specified, it sets away status and the **message** appears in the whois; otherwise it removes away status.
 
@@ -2448,7 +2437,7 @@ If a **message** is specified, it sets away status and the **message** appears i
 /AWAY
 ```
 
-#### DCCALLOW
+### DCCALLOW
 
 Adds or removes nicks from the allowed DCC list. Anyone on this list will be able to send you files with extensions normally blocked by the server. With the list option you get the list of people currently on your DCC allow list. The help option provides information similar to what is described here.
 
@@ -2468,7 +2457,7 @@ Adds or removes nicks from the allowed DCC list. Anyone on this list will be abl
 /DCCALLOW LIST
 ```
 
-#### HELP
+### HELP
 
 Provides the list of available commands, one per line.
 
@@ -2478,7 +2467,7 @@ Provides the list of available commands, one per line.
 /HELP
 ```
 
-#### INFO
+### INFO
 
 Provides information about the server you are connected to, or about a remote server if specified in **dest**: a nick or a server address can be indicated.
 
@@ -2495,7 +2484,7 @@ Provides information about the server you are connected to, or about a remote se
 /INFO sbrize.azzurra.chat
 ```
 
-#### INVITE
+### INVITE
 
 Invites **nick** to the specified channel.
 
@@ -2511,7 +2500,7 @@ Invites **nick** to the specified channel.
 /INVITE kavia #irchelp
 ```
 
-#### ISON
+### ISON
 
 Provides the list of the indicated nicks that are currently online, if any.
 
@@ -2528,7 +2517,7 @@ Provides the list of the indicated nicks that are currently online, if any.
 /ISON Mirtilla ^Ruby^ Casper
 ```
 
-#### JOIN
+### JOIN
 
 Attempts to join the specified channel(s), with the specified key(s), if required. Each key corresponds to a channel in the same position in the list; for example `"JOIN #c1,#c2,#c3 k2,k3"` is not correct if keys k2 and k3 are for #c2 and #c3, respectively. Instead `"JOIN #c1,#c2,#c3 k1,k2"` is correct if the first two channels require the indicated keys. Specifying 0 as the channel name results in leaving all channels you are currently in.
 
@@ -2547,7 +2536,7 @@ Attempts to join the specified channel(s), with the specified key(s), if require
 /join #irchelp,#channel war54,ciliegia
 ```
 
-#### KICK
+### KICK
 
 Kicks the specified nick(s) from the specified channel(s), with an optional reason. The kicks are carried out for all indicated nicks in all indicated channels.
 
@@ -2564,7 +2553,7 @@ Kicks the specified nick(s) from the specified channel(s), with an optional reas
 /kick #irchelp,#channel warBoT Niente guerra qui
 ```
 
-#### LINKS
+### LINKS
 
 Provides the list of servers currently connected to the network. If a mask is specified, only the matching links are provided. If **dest** is specified, the request is sent to the indicated remote server.
 
@@ -2585,7 +2574,7 @@ Hopcount is the number of "hops" needed to reach that given server, starting fro
 /LINKS 2night.azzurra.chat *.azzurra.chat
 ```
 
-#### LIST
+### LIST
 
 Provides the list of open channels.
 
@@ -2616,7 +2605,7 @@ The available options are:
 /LIST #irchelp
 ```
 
-#### LUSERS
+### LUSERS
 
 Provides statistics about the user base. If **dest** is specified, the reply will be provided by the indicated server: a nick or a server address can be specified. The second parameter (*) has no meaning but is kept for backward compatibility with previous versions.
 
@@ -2633,7 +2622,7 @@ Provides statistics about the user base. If **dest** is specified, the reply wil
 /LUSERS * caltanet.azzurra.chat
 ```
 
-#### MODE
+### MODE
 
 Changes the user modes (if specified) and provides the current user modes. **nick** must be the nick of whoever runs the command. A '+' enables the mode, while a '-' disables it. Modes can be combined, for example: `"/MODE mynick +i-wg+s"` (enables modes 'i' and 's', and disables modes 'w' and 'g'). At most 6 modes can be set per command.
 
@@ -2650,7 +2639,7 @@ Changes the user modes (if specified) and provides the current user modes. **nic
 /mode ^Norad^
 ```
 
-#### MODE
+### MODE
 
 The same as above, but for channels. Some channel modes require parameters, which are separated by spaces.
 
@@ -2672,7 +2661,7 @@ The same as above, but for channels. Some channel modes require parameters, whic
 /mode #irchelp +b (per vedere i ban impostati)
 ```
 
-#### MOTD
+### MOTD
 
 Provides the Message Of The Day. If **dest** is specified, the reply is provided by the specified server, which can be a nick or a server address.
 
@@ -2689,7 +2678,7 @@ Provides the Message Of The Day. If **dest** is specified, the reply is provided
 /MOTD wmgitalia.azzurra.chat
 ```
 
-#### NAMES
+### NAMES
 
 Provides the list of clients present in the specified channel, with an indication of op or voice status where applicable. Names on +s channels are only provided if you are currently present in that channel; the same applies to clients set +i (invisible).
 
@@ -2705,7 +2694,7 @@ Provides the list of clients present in the specified channel, with an indicatio
 /NAMES #irchelp
 ```
 
-#### NICK
+### NICK
 
 Changes your nickname.
 
@@ -2721,7 +2710,7 @@ Changes your nickname.
 /NICK ^Norad^
 ```
 
-#### NOTICE
+### NOTICE
 
 Can be used to send a notice to the specified nick (or a list of nicks). If the recipient's server name is specified, the notice will only be sent if the nick is connected to that server. This is a security measure, especially for the network's services.
 
@@ -2743,7 +2732,7 @@ It can also be used to send a notice to the specified channel (or a list of chan
 /NOTICE @+#IRCHelp Ci vediamo domani
 ```
 
-#### PART
+### PART
 
 Lets you leave the #canale with an optional message.
 
@@ -2760,7 +2749,7 @@ Lets you leave the #canale with an optional message.
 /PART #irchelp,#channel esco, ci vediamo
 ```
 
-#### PRIVMSG
+### PRIVMSG
 
 Can be used to send a message to the specified nick (or a list of nicks). If the destination server name is specified, the message will only be sent if the nick is connected to the indicated server. This is a security measure, especially for the Network's services.
 
@@ -2782,7 +2771,7 @@ It can also be used to send a message to a specified channel (or a list of chann
 /PRIVMSG @%+#irchelp Ciao
 ```
 
-#### QUIT
+### QUIT
 
 Disconnects from IRC, with an optional comment.
 
@@ -2799,7 +2788,7 @@ Disconnects from IRC, with an optional comment.
 /QUIT Torno dopo
 ```
 
-#### SILENCE
+### SILENCE
 
 Adds or removes the specified nick!user@host mask from the silence list. Clients whose mask matches one on the silence list will not be able to send you PRIVMSG or NOTICE. If no mask is specified, the command provides a list of the masks present in your silence list. The list can contain at most 10 masks. The list is emptied on disconnection.
 
@@ -2817,7 +2806,7 @@ Adds or removes the specified nick!user@host mask from the silence list. Clients
 /SILENCE
 ```
 
-#### STATS
+### STATS
 
 Provides statistics from the server. If **dest** is specified, the reply is provided by the indicated server: a nick or a server address can be specified.
 
@@ -2829,7 +2818,7 @@ Provides statistics from the server. If **dest** is specified, the reply is prov
 
 There are no flags available to users
 
-#### TIME
+### TIME
 
 Provides the server's local time. If **dest** is specified, the reply is provided by the indicated server: a nick or a server address can be specified.
 
@@ -2846,7 +2835,7 @@ Provides the server's local time. If **dest** is specified, the reply is provide
 /TIME cheapnet.azzurra.chat
 ```
 
-#### TOPIC
+### TOPIC
 
 Shows a channel's topic or changes it if one is specified.
 
@@ -2863,7 +2852,7 @@ Shows a channel's topic or changes it if one is specified.
 /TOPIC #IRCHelp =A= Azzurra IRC Help Channel =A= http://help.azzurra.chat prima di domandare =A=
 ```
 
-#### USERS
+### USERS
 
 Provides the number of local and global users (current and maximum). If **dest** is specified, the reply will be provided by the indicated server: a nick or a server address can be specified.
 
@@ -2880,7 +2869,7 @@ Provides the number of local and global users (current and maximum). If **dest**
 /USERS ssitalia.azzurra.chat
 ```
 
-#### USERHOST
+### USERHOST
 
 Provides summary information on the specified nick(s). First the nickname, followed by a '*' if they are an IRCop, the '=' character, '-' if away ('+' if not), username@hostname. Multiple replies are separated by spaces.
 
@@ -2898,7 +2887,7 @@ Provides summary information on the specified nick(s). First the nickname, follo
         > ^Norad^*=-~Norad@birillo.tiscali.com
 ```
 
-#### VERSION
+### VERSION
 
 Provides version information about the IRCd for the server you're connected to, or for a remote server if specified. If **dest** is specified, the reply will be provided by the indicated server: a nick or a server address can be specified.
 
@@ -2915,7 +2904,7 @@ Provides version information about the IRCd for the server you're connected to, 
 /VERSION b-network.azzurra.chat
 ```
 
-#### WATCH
+### WATCH
 
 Adds or removes the specified nick(s) from the watch list. You will be notified when someone on your watch list connects or disconnects. If no nick is specified, the list of currently online nicks on the watch list will be provided. The same command is used to get information about your own watch list. The list can contain at most 128 nicks.
 
@@ -2945,7 +2934,7 @@ Available flags are:
 
 These commands are normally handled by the client. In mIRC, by the NOTIFY command.
 
-#### WHO
+### WHO
 
 Provides information about the specified nick, channel or users.
 
@@ -3006,7 +2995,7 @@ Flags must be specified like user or channel modes – e.g. "-a+c" means "not aw
 /WHO +ch #irchelp *pool8250.interbusiness.it
 ```
 
-#### WHOIS
+### WHOIS
 
 Provides information about the specified nick (or a list of nicks): nickname, username, hostname, real name, channels they're in, connection server, information about the connection server, nick registration status, away status, IRC operator status, user modes and idle time [the latter only if the user is on the same server, or if the request is made to the server they're connected to, or by also putting the nick as **dest**]. If **dest** is specified the request is sent to the indicated server: a nick or a server address can be specified.
 
@@ -3025,7 +3014,7 @@ Provides information about the specified nick (or a list of nicks): nickname, us
 /WHOIS libero.azzurra.chat Casper
 ```
 
-#### WHOWAS
+### WHOWAS
 
 Provides the recorded information for the specified nick (or a list of nicks) from when it was online: nickname, username, hostname, real name, connection server, and disconnection time (UTC). If **max** is specified, information is only provided for the last **max** times the nick was used; by default all are provided. If **dest** is specified, the request is sent to the remote server (information is limited to the last 20 instances): a nick or a server address can be specified.
 
@@ -3053,6 +3042,19 @@ Some commands are also recognized by clients as their own commands. To have them
 /QUOTE VERSION
 /QUOTE HELP
 ```
+
+## Miscellaneous
+
+A brief guide explaining how to solve some of the most common problems users may encounter.
+
+- [IRC Commands](#server-commands) – The user commands of Azzurra's IRC daemon
+- [Help Ident](#help-ident) - A misconfigured Ident may prevent connecting
+- [Help DCC](#help-dcc) - Some file transfers may be blocked by the server
+- [Recognition masks](#recognition-masks-on-irc) – What masks are for and how they are determined
+- [Azzurra details](#azzurra-irc-network-details) – Network particulars
+- [Azzurra's Servers](#azzurras-servers) – Linked servers and addresses
+
+For more information, once connected to the network type: `/join #IRCHelp`
 
 ### Help Ident
 
@@ -3258,17 +3260,3 @@ You can see the servers that make up the Azzurra network with the **LINKS** comm
 
 For those who don't want to install a client, or are on a network that only lets web traffic through, there's the browser webchat:\
 <https://webchat.azzurra.chat>
-
-### Useful links
-
-| Topic | Link |
-|-----------|------|
-| Azzurra's website | <https://www.azzurra.chat/> |
-| The webchat | <https://webchat.azzurra.chat/> |
-| HexChat (Windows / Linux) | <https://hexchat.github.io/> |
-| Textual (macOS) | <https://www.codeux.com/textual/> |
-| WeeChat (terminal) | <https://weechat.org/> |
-| Irssi (terminal) | <https://irssi.org/> |
-| mIRC (Windows) | <https://www.mirc.com/> |
-| RFC 1459 – the IRC protocol | <https://www.rfc-editor.org/rfc/rfc1459> |
-| RFC 2812 – IRC Client Protocol | <https://www.rfc-editor.org/rfc/rfc2812> |
