@@ -84,6 +84,12 @@ defaultContentLanguageInSubdir = false
     [languages.it.menus.footer.params]
       col = "rete"
   [[languages.it.menus.footer]]
+    name   = "IRC Help"
+    url    = "/irc-help"
+    weight = 4
+    [languages.it.menus.footer.params]
+      col = "rete"
+  [[languages.it.menus.footer]]
     name   = "La Storia"
     url    = "/storia"
     weight = 1
@@ -174,6 +180,12 @@ defaultContentLanguageInSubdir = false
     name   = "Services"
     url    = "/en/services"
     weight = 3
+    [languages.en.menus.footer.params]
+      col = "rete"
+  [[languages.en.menus.footer]]
+    name   = "IRC Help"
+    url    = "/en/irc-help"
+    weight = 4
     [languages.en.menus.footer.params]
       col = "rete"
   [[languages.en.menus.footer]]

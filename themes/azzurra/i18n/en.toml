@@ -81,3 +81,9 @@ other = "by"
 # Shortcode
 [infoBoxDefaultTitle]
 other = "ℹ️ Note"
+
+# IRC Help
+[ircHelpFilter]
+other = "Search a command…"
+[ircHelpNoMatch]
+other = "No command found."

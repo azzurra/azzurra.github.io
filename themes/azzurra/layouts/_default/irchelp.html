@@ -1,0 +1,135 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+</div>
+
+<main class="site-main">
+  <div class="breadcrumb">
+    <a href="{{ "/" | relLangURL }}">{{ i18n "breadcrumbHome" }}</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{{ .Title }}</span>
+  </div>
+
+  <div class="irchelp-tools" hidden>
+    <div class="irchelp-tabs" role="tablist"></div>
+    <input type="search" class="irchelp-filter" placeholder="{{ i18n "ircHelpFilter" }}" aria-label="{{ i18n "ircHelpFilter" }}">
+  </div>
+  <p class="irchelp-empty" hidden>{{ i18n "ircHelpNoMatch" }}</p>
+
+  <div class="page-content irchelp">
+    {{ .Content }}
+  </div>
+</main>
+
+<script>
+// Without JS the page stays one long readable document. With JS every
+// "##" section becomes a tab and every "###" command a closed <details>.
+(() => {
+  const root = document.querySelector('.irchelp');
+  const tools = document.querySelector('.irchelp-tools');
+  const tabs = tools.querySelector('.irchelp-tabs');
+  const filter = tools.querySelector('.irchelp-filter');
+  const empty = document.querySelector('.irchelp-empty');
+
+  const panels = [];
+  let panel = null, cmd = null;
+  for (const node of [...root.children]) {
+    if (node.tagName === 'H2') {
+      panel = document.createElement('section');
+      panel.className = 'irchelp-panel';
+      panel.id = node.id;
+      node.removeAttribute('id');
+      root.insertBefore(panel, node);
+      panel.appendChild(node);
+      panels.push(panel);
+      cmd = null;
+    } else if (node.tagName === 'H3' && panel) {
+      cmd = document.createElement('details');
+      cmd.id = node.id;
+      const summary = document.createElement('summary');
+      summary.textContent = node.textContent.replace(/^\S+\s+[-–]\s+/, '');
+      cmd.appendChild(summary);
+      panel.appendChild(cmd);
+      node.remove();
+    } else if (cmd) {
+      cmd.appendChild(node);
+    } else if (panel) {
+      panel.appendChild(node);
+    }
+  }
+  if (!panels.length) return;
+
+  // The "- **ACC** - ..." list at the top of each service is its index:
+  // link every bold command name to the matching <details>.
+  for (const p of panels) {
+    const byName = new Map([...p.querySelectorAll('details')].map(d => [d.querySelector('summary').textContent.split(/\s/)[0].toUpperCase(), d]));
+    for (const strong of p.querySelectorAll(':scope > ul > li > strong:first-child')) {
+      const d = byName.get(strong.textContent.trim().toUpperCase());
+      if (!d) continue;
+      const a = document.createElement('a');
+      a.href = '#' + d.id;
+      strong.replaceWith(a);
+      a.appendChild(strong);
+    }
+  }
+
+  const show = (target) => {
+    for (const p of panels) p.hidden = p !== target;
+    for (const b of tabs.children) b.setAttribute('aria-selected', b.dataset.id === target.id);
+  };
+
+  const runFilter = () => {
+    const q = filter.value.trim().toLowerCase();
+    let hits = 0;
+    for (const p of panels) {
+      if (!q) { p.classList.remove('filtering'); continue; }
+      p.classList.add('filtering');
+      let panelHits = 0;
+      for (const d of p.querySelectorAll('details')) {
+        const match = d.textContent.toLowerCase().includes(q);
+        d.hidden = !match;
+        if (match) panelHits++;
+      }
+      p.hidden = panelHits === 0;
+      hits += panelHits;
+    }
+    if (!q) {
+      for (const d of root.querySelectorAll('details')) d.hidden = false;
+      const current = tabs.querySelector('[aria-selected="true"]');
+      show(panels.find(p => p.id === current?.dataset.id) || panels[0]);
+    }
+    empty.hidden = !q || hits > 0;
+  };
+  filter.addEventListener('input', runFilter);
+
+  for (const p of panels) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.dataset.id = p.id;
+    b.textContent = p.querySelector('h2').textContent.replace(/^I comandi di |\s+commands$/i, '');
+    b.addEventListener('click', () => {
+      filter.value = '';
+      runFilter();
+      show(p);
+      history.replaceState(null, '', '#' + p.id);
+    });
+    tabs.appendChild(b);
+  }
+
+  const fromHash = () => {
+    const el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    const p = el && panels.find(p => p.contains(el));
+    show(p || panels[0]);
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+  };
+  window.addEventListener('hashchange', fromHash);
+
+  tools.hidden = false;
+  fromHash();
+})();
+</script>
+
+{{ end }}

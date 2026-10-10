@@ -379,3 +379,19 @@ img { max-width: 100%; height: auto; display: block; }
   .home-hero { padding: 2.5rem 1.25rem 2rem; }
 }
 
+
+/* ── IRC Help: tabs per service, one <details> per command ─────────── */
+.page-content.irchelp { max-width: none; }
+.irchelp-tools { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem; }
+.irchelp-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; flex: 1 1 auto; }
+.irchelp-tabs button { font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.4rem 0.85rem; cursor: pointer; transition: var(--transition); }
+.irchelp-tabs button:hover { color: var(--primary); border-color: var(--primary-light); }
+.irchelp-tabs button[aria-selected="true"] { color: var(--text-on-dark); background: var(--primary); border-color: var(--primary); }
+.irchelp-filter { font: inherit; font-size: 0.9rem; flex: 0 1 16rem; min-width: 0; padding: 0.45rem 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); }
+.irchelp-empty { color: var(--text-faint); }
+.irchelp details { border: 1px solid var(--border-light); border-radius: var(--radius); background: var(--surface); margin-bottom: 0.5rem; }
+.irchelp details > summary { cursor: pointer; padding: 0.55rem 0.9rem; font-family: var(--font-mono); font-weight: 500; color: var(--navy); }
+.irchelp details > summary:hover { color: var(--primary); }
+.irchelp details[open] { padding: 0 0.9rem 0.5rem; box-shadow: var(--shadow-sm); }
+.irchelp details[open] > summary { margin: 0 -0.9rem 0.75rem; border-bottom: 1px solid var(--border-light); }
+.irchelp-panel.filtering > :not(details):not(h2) { display: none; }
