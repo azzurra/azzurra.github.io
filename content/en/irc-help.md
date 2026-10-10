@@ -7,7 +7,8 @@ layout: irchelp
 
 *Original guide by Laura ^Norad^ Tommasini, Mask section by City_Hunter, update by Delphino (Help v2.6, 2007). 2026 revision by the Azzurra staff.*
 
-**N.B.** Square brackets, which enclose an optional parameter, must never be used in commands. Options separated by the `|` character (for example `ON|OFF`) mean you must type either `ON` or `OFF`.
+> [!WARNING]
+> **N.B.** Square brackets, which enclose an optional parameter, must never be used in commands. Options separated by the `|` character (for example `ON|OFF`) mean you must type either `ON` or `OFF`.
 
 Command parts shown in UPPERCASE, as well as `/msg NickServ`, `/msg ChanServ` etc., must not be modified.
 
@@ -2315,31 +2316,14 @@ Several user and channel modes are available on Azzurra:
 | Mode | Description |
 |:----:|-------------|
 | a | (Services Only) Marks a Services Administrator. |
-| A | (IRCOp Only) Marks a Server Administrator. |
-| b | (IRCOp Only) Allows viewing CHATOPS messages. |
-| c | (IRCOp Only) Shows client connections/disconnections. |
-| d | (IRCOp Only) Allows viewing Debug messages. |
-| e | (IRCOp Only) Allows viewing invalid DCC messages. |
-| f | (IRCOp Only) Allows viewing Flood messages. |
-| F | (IRCOp Only) Exempts a client from Flood limitations. |
-| g | (IRCOp Only) Allows viewing GLOBOPS messages. |
 | h | (HelpOp Only) Marks a Help Operator (+h can only be obtained via identification). |
 | i | Invisible to users running the /names or /who command. |
-| I | (IRCOp Only) Allows hiding idle time from WHOIS. |
 | j | Marks a client chatting from the web via Java. |
-| k | (IRCOp Only) Allows viewing Kill messages. |
-| K | (IRCOp Only) Allows viewing Kill messages from services. |
-| m | (IRCOp Only) Allows viewing Spam messages. |
-| n | (IRCOp Only) Allows viewing Routing messages. |
-| o | (IRCOp Only) Marks a global IRC Operator. |
-| O | (IRCOp Only) Marks a local IRC Operator. |
 | r | (Services Only) Marks a nick registered with NickServ and identified. |
 | R | Accepts queries only from nicks registered with NickServ and identified. |
-| s | Allows viewing server messages (Kills, etc.), only if you are an IRCop. |
 | S | Marks a client connecting via SSL (Secure Sockets Layer). |
 | w | Allows viewing WALLOPS messages. |
 | x | Encrypts part of the host or IP. |
-| y | (IRCOp Only) Shows notification of certain commands (/ADMIN, /LINKS, /WHOIS, etc.). |
 | z | (Services Only) Marks a Services Agent. |
 
 **Syntax:**
@@ -2379,7 +2363,6 @@ or
 | M | | Makes the channel moderated: only those who are identified can speak, or **+o**, **+h** and **+v**. |
 | n | | Prohibits sending messages to the channel from outside. |
 | o | nick | Allows setting a nickname as channel operator. |
-| O | | (IRCop Only) Allows only IRC Operators to join. |
 | p | | Makes the channel private (does not appear in /WHOIS, the topic is hidden in /LIST). |
 | r | | (Services Only) Marks a channel registered with ChanServ. |
 | R | | Allows only nicks registered with NickServ to join the channel. |
