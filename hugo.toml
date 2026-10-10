@@ -57,13 +57,17 @@ defaultContentLanguageInSubdir = false
     url    = "/network"
     weight = 4
   [[languages.it.menus.main]]
+    name   = "IRC Help"
+    url    = "/irc-help"
+    weight = 5
+  [[languages.it.menus.main]]
     name   = "FAQ"
     url    = "/faq"
-    weight = 5
+    weight = 6
   [[languages.it.menus.main]]
     name   = "Contatti"
     url    = "/contatti"
-    weight = 6
+    weight = 7
 
   [[languages.it.menus.footer]]
     name   = "Notizie"
@@ -156,13 +160,17 @@ defaultContentLanguageInSubdir = false
     url    = "/en/network"
     weight = 4
   [[languages.en.menus.main]]
+    name   = "IRC Help"
+    url    = "/en/irc-help"
+    weight = 5
+  [[languages.en.menus.main]]
     name   = "FAQ"
     url    = "/en/faq"
-    weight = 5
+    weight = 6
   [[languages.en.menus.main]]
     name   = "Contact"
     url    = "/en/contact"
-    weight = 6
+    weight = 7
 
   [[languages.en.menus.footer]]
     name   = "News"
