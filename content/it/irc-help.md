@@ -3048,7 +3048,7 @@ Alcuni comandi inoltre vengono riconosciuti dai client come comandi propri. Per 
 Una breve guida per spiegare come risolvere alcuni dei problemi più comuni che gli utenti potrebbero rilevare.
 
 - [Comandi IRC](#comandi-del-server) – I comandi utente dell’IRC daemon di Azzurra
-- [Help Ident](#help-ident) - Un'errata configurazione dell'Ident potrebbe impedire la connessione
+- [Help Ident](#help-ident) - Cos'è la ~ davanti allo username
 - [Help DCC](#help-dcc) - Alcuni trasferimenti di files possono venire bloccati dal server
 - [Maschere di riconoscimento](#maschere-di-riconoscimento-su-irc) – A cosa servono e come si determinano le mask
 - [Dettagli di Azzurra](#dettagli-di-azzurra-irc-network) – Particolarità della rete
@@ -3058,26 +3058,9 @@ Per maggiori informazioni, una volta connessi al network digitare: `/join #IRCHe
 
 ### Help Ident
 
-Per una corretta connessione priva di problemi, potrebbe essere necessario abilitare l'IDENT server nelle opzioni di mIRC. Per abilitarla è necessario seguire questi semplici passi:
+Non serve configurare nulla: su Azzurra l'Ident non è obbligatorio. Se il tuo client non risponde alla richiesta Ident, il server mette una `~` davanti al tuo username (ad esempio `~pippo@host`) e la connessione prosegue normalmente.
 
-- Accedere alle Opzioni, premendo contemporaneamente i tasti ALT ed O
-- Andare su Connect e poi su Identd
-- Barrare le casella di spunta Enable Ident server
-- Compilare il campo User ID con il proprio username
-- Compilare il campo System con il proprio sistema operativo (consigliato comunque impostarlo in UNIX)
-- Compilare il campo Port con la porta relativa all'Ident request (solitamente la 113)
-
-Nota: un'errata impostazione dello User ID può impedire la connessione al server.
-
-Sono infatti vietati User ID di un solo carattere che non sia una lettera dell'alfabeto (a...z) e User ID che contengano caratteri "strani" ($, @, !, e così via).
-
-Se neanche con l'impostazione dell'Ident riuscite a collegarvi, dovete:
-
-- Accedere alle Opzioni, premendo contemporaneamente i tasti ALT ed O
-- Andare su Connect
-- Controllare che nel campo E-Mail Address non siano contenuti caratteri "strani" di cui sopra
-
-Se neanche adesso riuscite a collegarvi, è colpa del vostro script che forza una sua ident che probabilmente contiene caratteri non ammessi. Sarete costretti a cambiare script oppure a digitare `/remote off` prima di collegarvi a un nostro server.
+Se lo username contiene caratteri non ammessi, il server li sostituisce con `_`; rifiuta la connessione solo se lo username contiene una `@` o è comunque non valido. In quel caso cambia lo username (o l'indirizzo e-mail, da cui molti client lo ricavano) nelle opzioni del client.
 
 ### Help DCC
 

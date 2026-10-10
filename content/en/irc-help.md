@@ -3048,7 +3048,7 @@ Some commands are also recognized by clients as their own commands. To have them
 A brief guide explaining how to solve some of the most common problems users may encounter.
 
 - [IRC Commands](#server-commands) – The user commands of Azzurra's IRC daemon
-- [Help Ident](#help-ident) - A misconfigured Ident may prevent connecting
+- [Help Ident](#help-ident) - What the ~ in front of the username means
 - [Help DCC](#help-dcc) - Some file transfers may be blocked by the server
 - [Recognition masks](#recognition-masks-on-irc) – What masks are for and how they are determined
 - [Azzurra details](#azzurra-irc-network-details) – Network particulars
@@ -3058,26 +3058,9 @@ For more information, once connected to the network type: `/join #IRCHelp`
 
 ### Help Ident
 
-For a correct, trouble-free connection, you may need to enable the IDENT server in mIRC's options. To enable it, follow these simple steps:
+There is nothing to configure: Ident is not required on Azzurra. If your client does not answer the Ident request, the server puts a `~` in front of your username (for example `~pippo@host`) and the connection goes ahead normally.
 
-- Open Options, by pressing ALT and O at the same time
-- Go to Connect and then to Identd
-- Check the Enable Ident server checkbox
-- Fill in the User ID field with your username
-- Fill in the System field with your operating system (it is however recommended to set it to UNIX)
-- Fill in the Port field with the port for the Ident request (usually 113)
-
-Note: an incorrect User ID setting can prevent connection to the server.
-
-Single-character User IDs that are not a letter of the alphabet (a...z) are in fact forbidden, as are User IDs containing "strange" characters ($, @, !, and so on).
-
-If you still cannot connect even after setting up Ident, you must:
-
-- Open Options, by pressing ALT and O at the same time
-- Go to Connect
-- Check that the E-Mail Address field does not contain the "strange" characters mentioned above
-
-If you still cannot connect, it is the fault of your script, which forces its own ident that probably contains disallowed characters. You will be forced to change script, or to type `/remote off` before connecting to one of our servers.
+If the username contains characters that are not allowed, the server replaces them with `_`; it refuses the connection only if the username contains an `@` or is otherwise invalid. In that case change the username (or the e-mail address, which many clients derive it from) in your client's options.
 
 ### Help DCC
 
