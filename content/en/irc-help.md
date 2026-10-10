@@ -685,13 +685,13 @@ N.B.: replace #canale with the name of the channel on which you want to make the
 **Examples:**
 
 ```text
-/msg ChanServ AOP #ToonTown ADD Casper
+/msg ChanServ AOP #irchelp ADD Casper
 /msg ChanServ AOP #IRCHelp ADD *!*pippo@*.carota.net
 /msg ChanServ AOP #IRCHelp DEL 2
 /msg ChanServ AOP #IRCHelp FIND *!*@*.interbusiness.it
 /msg ChanServ AOP #IRCHelp LIST *.it
-/msg ChanServ AOP #WILAMER LOCK ^{l4m3r}^
-/msg ChanServ AOP #Gianicolo UNLOCK Rodolfo
+/msg ChanServ AOP #irchelp LOCK ^{l4m3r}^
+/msg ChanServ AOP #irchelp UNLOCK Rodolfo
 ```
 
 For problems determining masks, consult the Recognition Masks section or contact an operator on #IRCHelp.
@@ -737,11 +737,11 @@ N.B.: replace #canale with the name of the channel on which you want to make the
 **Examples:**
 
 ```text
-/msg ChanServ CFOUNDER #WiLamer ADD I_am_l4m3r
+/msg ChanServ CFOUNDER #irchelp ADD I_am_l4m3r
 /msg ChanServ CFOUNDER #IRCHelp ADD *!*pippo@*.carota.net
 /msg ChanServ CFOUNDER #IRCHelp DEL 3
 /msg ChanServ CFOUNDER #IRCHelp LIST *pippo*
-/msg ChanServ CFOUNDER #italia FIND *!*@*.carota.net
+/msg ChanServ CFOUNDER #irchelp FIND *!*@*.carota.net
 ```
 
 For problems determining masks, consult the Recognition Masks section or contact an operator on #IRCHelp.
@@ -765,7 +765,7 @@ You must be at least VOP to be able to use this command.
 **Example:**
 
 ```text
-/msg ChanServ COUNT #Soleluna
+/msg ChanServ COUNT #irchelp
 ```
 
 ### ChanServ - DEHALFOP
@@ -781,8 +781,8 @@ Removes the channel halfop status from the specified user. This has no effect on
 **Examples:**
 
 ```text
-/msg ChanServ DEHALFOP #liberozone Alberto
-/msg ChanServ DEHALFOP #MioCanale Luca3 ^martina^ AnToNeLla
+/msg ChanServ DEHALFOP #irchelp Alberto
+/msg ChanServ DEHALFOP #irchelp Luca3 ^martina^ AnToNeLla
 ```
 
 ### ChanServ - DEOP
@@ -798,8 +798,8 @@ Removes the channel operator status from the specified user. This has no effect 
 **Examples:**
 
 ```text
-/msg ChanServ DEOP #liberozone Alberto
-/msg ChanServ DEOP #MioCanale Luca3 ^martina^ AnToNeLla
+/msg ChanServ DEOP #irchelp Alberto
+/msg ChanServ DEOP #irchelp Luca3 ^martina^ AnToNeLla
 ```
 
 ### ChanServ - DEVOICE
@@ -815,8 +815,8 @@ Removes the specified user's ability to send text on a moderated channel. This h
 **Examples:**
 
 ```text
-/msg ChanServ DEVOICE #MioCanale Papero
-/msg ChanServ DEVOICE #Soleluna ^Bang^ [Roberto] Cucciola
+/msg ChanServ DEVOICE #irchelp Papero
+/msg ChanServ DEVOICE #irchelp ^Bang^ [Roberto] Cucciola
 ```
 
 ### ChanServ - DROP
@@ -840,9 +840,9 @@ Use is limited to once a day.
 **Examples:**
 
 ```text
-/msg ChanServ DROP #WiLamer
-/msg ChanServ DROP #WiLamer 1064149619
-/msg ChanServ DROP #WiLamer UNDO
+/msg ChanServ DROP #irchelp
+/msg ChanServ DROP #irchelp 1064149619
+/msg ChanServ DROP #irchelp UNDO
 ```
 
 ### ChanServ - HALFOP
@@ -858,8 +858,8 @@ This command grants HalfOp status to the specified user. It has no effect on the
 **Examples:**
 
 ```text
-/msg ChanServ HALFOP #Italia MaSCiA
-/msg ChanServ HALFOP #Baraonda Gino^ mirtilla2 ]Antonio[ _ZIP_
+/msg ChanServ HALFOP #irchelp MaSCiA
+/msg ChanServ HALFOP #irchelp Gino^ mirtilla2 ]Antonio[ _ZIP_
 ```
 
 ### ChanServ - HELP
@@ -923,13 +923,13 @@ N.B.: replace #canale with the name of the channel on which you want to make the
 **Examples:**
 
 ```text
-/msg ChanServ HOP #ToonTown ADD Casper
+/msg ChanServ HOP #irchelp ADD Casper
 /msg ChanServ HOP #IRCHelp ADD *!*pippo@*.carota.net
 /msg ChanServ HOP #IRCHelp DEL 2
 /msg ChanServ HOP #IRCHelp LIST *.it
 /msg ChanServ HOP #IRCHelp LIST *!*@*.interbusiness.it
-/msg ChanServ HOP #WILAMER LOCK ^{l4m3r}^
-/msg ChanServ HOP #Gianicolo UNLOCK Rodolfo
+/msg ChanServ HOP #irchelp LOCK ^{l4m3r}^
+/msg ChanServ HOP #irchelp UNLOCK Rodolfo
 ```
 
 For problems determining masks, consult the Recognition Masks section or contact an operator on #IRCHelp.
@@ -949,8 +949,8 @@ Some commands, such as DROP, SET FOUNDER, SET NOMKICK, require identification to
 **Example:**
 
 ```text
-/msg ChanServ IDENTIFY #WiLamer h4rt34c330
-/msg ChanServ IDENTIFY #Baraonda zupercaoz
+/msg ChanServ IDENTIFY #irchelp h4rt34c330
+/msg ChanServ IDENTIFY #irchelp zupercaoz
 ```
 
 ### ChanServ - INFO
@@ -966,21 +966,21 @@ Provides all the available information about the specified channel, if it is reg
 **Example:**
 
 ```text
-/msg ChanServ INFO #Italia
+/msg ChanServ INFO #irchelp
 ```
 
 **Result:**
 
 ```text
-ChanServ- Info sul canale #italia:
+ChanServ- Info sul canale #irchelp:
 ChanServ- Founder: MariaM (tarokker@exclusive.property.of.evilmaio.com)
 ChanServ- Successor: kernella
 ChanServ- Descrizione: Il vostro canale di conversazione
-ChanServ- Messaggio di benvenuto: Benvenuti su #italia, buona permanenza e buon divertimento! Istruzioni per l'uso: http://forum.azzurra.chat/showthread.php?t=4886 | fai richiesta anche tu per la tua scheda su http://italia.azzurra.chat/invio-scheda.php
+ChanServ- Messaggio di benvenuto: Benvenuti su #irchelp, buona permanenza e buon divertimento! Istruzioni per l'uso: http://forum.azzurra.chat/showthread.php?t=4886 | fai richiesta anche tu per la tua scheda su http://italia.azzurra.chat/invio-scheda.php
 Data registrazione: 25 Mar 1999 - 22:32:56 (CET)
 Ultimo join: 03 Giu 2005 - 01:20:45 (CEST) [meno di 1 ora fa]
 Ora corrente: 03 Giu 2005 - 01:38:43 (CEST)
-Ultimo topic: Per il sito di #Italia http://italia.azzurra.chat, il resto son solo chiacchiere. Entra nella community! Per inserire la tua scheda--> http://italia.azzurra.chat/invio-scheda.php'
+Ultimo topic: Per il sito di #irchelp http://italia.azzurra.chat, il resto son solo chiacchiere. Entra nella community! Per inserire la tua scheda--> http://italia.azzurra.chat/invio-scheda.php'
 ChanServ- Topic cambiato da: Barbatruk
 ChanServ- Memo Level: VOP
 ChanServ- Lingua: Italiano (Italian)
@@ -1004,7 +1004,7 @@ Used to invite yourself into a channel. You must be at least VOP to use this com
 **Example:**
 
 ```text
-/msg ChanServ INVITE #soleluna
+/msg ChanServ INVITE #irchelp
 ```
 
 ### ChanServ - MDEHALFOP
@@ -1020,7 +1020,7 @@ Performs a MassDehalfop, removing halfop status from all users in the channel ex
 **Example:**
 
 ```text
-/msg ChanServ MDEHALFOP #IPv6
+/msg ChanServ MDEHALFOP #irchelp
 ```
 
 ### ChanServ - MDEOP
@@ -1036,7 +1036,7 @@ Performs a MassDeop, removing operator status from all users in the channel exce
 **Example:**
 
 ```text
-/msg ChanServ MDEOP #IPv6
+/msg ChanServ MDEOP #irchelp
 ```
 
 ### ChanServ - MDEVOICE
@@ -1052,7 +1052,7 @@ Performs a MassDevoice, removing voice status from all users in the channel. You
 **Example:**
 
 ```text
-/msg ChanServ MDEVOICE #Liberozone
+/msg ChanServ MDEVOICE #irchelp
 ```
 
 ### ChanServ - MKICK
@@ -1072,8 +1072,8 @@ It is therefore not possible to use the DEOP, DROP, INVITE, MDEHALFOP, MDEOP, MD
 **Example:**
 
 ```text
-/msg ChanServ MKICK #WiLamer
-/msg ChanServ MKICK #Gulp Facciamo ordine
+/msg ChanServ MKICK #irchelp
+/msg ChanServ MKICK #irchelp Facciamo ordine
 ```
 
 ### ChanServ - MODE
@@ -1091,11 +1091,11 @@ You must be at least SOP to use this command. Only CF and Founder can use it to 
 **Examples:**
 
 ```text
-/msg ChanServ MODE #WiLamer +l 20
-/msg ChanServ MODE #WiLamer +k hh3er45
-/msg ChanServ MODE #WiLamer -k *
-/msg ChanServ MODE #WiLamer -cdu
-/msg ChanServ MODE #WiLamer +nt-is
+/msg ChanServ MODE #irchelp +l 20
+/msg ChanServ MODE #irchelp +k hh3er45
+/msg ChanServ MODE #irchelp -k *
+/msg ChanServ MODE #irchelp -cdu
+/msg ChanServ MODE #irchelp +nt-is
 ```
 
 NOTE: check your IRC client's help for the valid Channel modes, their function and syntax, or once connected type `/msg HelpServ CMODE`.
@@ -1115,8 +1115,8 @@ The OP command grants channel operator status to a user. This command has no eff
 **Examples:**
 
 ```text
-/msg ChanServ OP #Soleluna ^Norad^
-/msg ChanServ OP #Radioitalia kavia typedef_c
+/msg ChanServ OP #irchelp ^Norad^
+/msg ChanServ OP #irchelp kavia typedef_c
 ```
 
 ### ChanServ - REGISTER
@@ -1142,8 +1142,8 @@ NOTE: replace #channel with the name of the channel to register, password with w
 **Examples:**
 
 ```text
-/msg ChanServ REGISTER #OrtolaniUniti 12A04B57C Il canale per discutere sulle verdure
-/msg ChanServ REGISTER #Pennac FataCarabina Chiacchiere su Belleville e la famiglia Malaussène
+/msg ChanServ REGISTER #irchelp 12A04B57C Il canale per discutere sulle verdure
+/msg ChanServ REGISTER #irchelp FataCarabina Chiacchiere su Belleville e la famiglia Malaussène
 ```
 
 ### ChanServ - REMOVE
@@ -1163,7 +1163,7 @@ It is not possible to remove with this command any masks that contain the nick c
 **Example:**
 
 ```text
-/msg ChanServ REMOVE #WiLamer
+/msg ChanServ REMOVE #irchelp
 ```
 
 ### ChanServ - RESETMODES
@@ -1179,7 +1179,7 @@ This command resets all channel modes (c, C, i, k, l, m, M, n, p, R, s, t, u, U)
 **Example:**
 
 ```text
-/msg ChanServ RESETMODES #IPv6
+/msg ChanServ RESETMODES #irchelp
 ```
 
 ### ChanServ - SET
@@ -1199,7 +1199,7 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #debian AUTOOP ON
+  /msg ChanServ SET #irchelp AUTOOP ON
   /msg ChanServ SET #irchelp AUTOOP OFF
   ```
 
@@ -1216,7 +1216,7 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #debian AUTOHALFOP ON
+  /msg ChanServ SET #irchelp AUTOHALFOP ON
   /msg ChanServ SET #irchelp AUTOHALFOP OFF
   ```
 
@@ -1233,7 +1233,7 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #WiLamer AUTOVOICE ON
+  /msg ChanServ SET #irchelp AUTOVOICE ON
   /msg ChanServ SET #irchelp AUTOVOICE OFF
   ```
 
@@ -1250,7 +1250,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #Io&Te BANTYPE 3
+  /msg ChanServ SET #irchelp BANTYPE 3
   ```
 
 - **DESC** - Sets the channel's description.
@@ -1266,7 +1266,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #Io&Te DESC Canale privato di ^Cindy^ e Robert
+  /msg ChanServ SET #irchelp DESC Canale privato di ^Cindy^ e Robert
   ```
 
 - **EMAIL** - Configures the channel's reference email.
@@ -1298,7 +1298,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #NoiDue FOUNDER Mary
+  /msg ChanServ SET #irchelp FOUNDER Mary
   ```
 
 - **IDENT** - If enabled, you will need to be identified to NickServ to be recognized.
@@ -1316,7 +1316,7 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #Baraonda IDENT OFF
+  /msg ChanServ SET #irchelp IDENT OFF
   /msg ChanServ SET #irchelp IDENT ON
   ```
 
@@ -1333,8 +1333,8 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #Baraonda KEEPTOPIC OFF
-  /msg ChanServ SET #Liberozone KEEPTOPIC ON
+  /msg ChanServ SET #irchelp KEEPTOPIC OFF
+  /msg ChanServ SET #irchelp KEEPTOPIC ON
   ```
 
 - **LANG** - Changes the language used by ChanServ to send messages.
@@ -1371,7 +1371,7 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp MEMOLEVEL VOP
-  /msg ChanServ SET #Silenziosi MEMOLEVEL NONE
+  /msg ChanServ SET #irchelp MEMOLEVEL NONE
   ```
 
 - **MLOCK** - Defines which channel modes are locked.
@@ -1394,9 +1394,9 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp MLOCK +cnt
-  /msg ChanServ SET #Silenziosi MLOCK +ntmcu-il
-  /msg ChanServ SET #SoloNoi MLOCK +ntk 040283
-  /msg ChanServ SET #Liberi MLOCK NONE
+  /msg ChanServ SET #irchelp MLOCK +ntmcu-il
+  /msg ChanServ SET #irchelp MLOCK +ntk 040283
+  /msg ChanServ SET #irchelp MLOCK NONE
   ```
 
 - **NOMKICK** - Blocks the MKICK command for the channel.
@@ -1412,7 +1412,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #debian NOMKICK OFF
+  /msg ChanServ SET #irchelp NOMKICK OFF
   ```
 
 - **NEVEROP** - Does not automatically op AOP and above on joining the channel.
@@ -1444,7 +1444,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #soleluna OPGUARD ON
+  /msg ChanServ SET #irchelp OPGUARD ON
   ```
 
 - **PASSWD** - Changes the specified channel's password to the new specified password.
@@ -1460,7 +1460,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #italia PASSWD carota ndtw564Ac4W
+  /msg ChanServ SET #irchelp PASSWD carota ndtw564Ac4W
   ```
 
 - **PROTECT** - Protects the operators registered on the lists.
@@ -1476,7 +1476,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #gdp PROTECT ON
+  /msg ChanServ SET #irchelp PROTECT ON
   ```
 
 - **RESTRICT** - Restricts access to the channel to only nicks registered on the lists.
@@ -1492,7 +1492,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #Io&Te RESTRICT ON
+  /msg ChanServ SET #irchelp RESTRICT ON
   ```
 
 - **SUCCESSOR** – Sets a successor for the channel.
@@ -1512,8 +1512,8 @@ This command allows you to permanently change the channel's settings, and can on
   Examples:
 
   ```text
-  /msg ChanServ SET #SoloNoi SUCCESSOR Jenny
-  /msg ChanServ SET #Baraonda SUCCESSOR NONE
+  /msg ChanServ SET #irchelp SUCCESSOR Jenny
+  /msg ChanServ SET #irchelp SUCCESSOR NONE
   ```
 
 - **TOPIC** – Changes the channel's topic.
@@ -1529,7 +1529,7 @@ This command allows you to permanently change the channel's settings, and can on
   Example:
 
   ```text
-  /msg ChanServ SET #italia TOPIC :: Benvenuti in #Italia :: Chattate & Divertitevi. No flame - No parolacce e offese - No spam ::
+  /msg ChanServ SET #irchelp TOPIC :: Benvenuti in #irchelp :: Chattate & Divertitevi. No flame - No parolacce e offese - No spam ::
   ```
 
 - **TOPICLOCK** - Only allows the specified category of users to change the topic.
@@ -1546,7 +1546,7 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp TOPICLOCK AOP
-  /msg ChanServ SET #Soleluna TOPICLOCK OFF
+  /msg ChanServ SET #irchelp TOPICLOCK OFF
   ```
 
 - **URL** - Sets the channel's home page address.
@@ -1563,7 +1563,7 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp URL http://www.azzurra.chat/irchelp.php
-  /msg ChanServ SET #Soleluna URL NONE
+  /msg ChanServ SET #irchelp URL NONE
   ```
 
 - **VERBOSE** - Lets you choose which opnotices to receive.
@@ -1585,7 +1585,7 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp VERBOSE 3
-  /msg ChanServ SET #Io&Te VERBOSE 0
+  /msg ChanServ SET #irchelp VERBOSE 0
   ```
 
 - **WELCOME** - Defines the welcome message that ChanServ will send as a notice to everyone who joins the specified channel.
@@ -1602,8 +1602,8 @@ This command allows you to permanently change the channel's settings, and can on
 
   ```text
   /msg ChanServ SET #irchelp WELCOME NONE
-  /msg ChanServ SET #italia MOTD Benvenuti nel canale #Italia di Azzurra IRC Network
-  /msg ChanServ SET #OrtolaniUniti WELCOME Mercoledì mercato!!! Prezzi senza confronti!
+  /msg ChanServ SET #irchelp MOTD Benvenuti nel canale #irchelp di Azzurra IRC Network
+  /msg ChanServ SET #irchelp WELCOME Mercoledì mercato!!! Prezzi senza confronti!
   ```
 
 ### ChanServ - SOP
@@ -1681,7 +1681,7 @@ ALL removes all bans on the channel. You must be at least SOP to use it.
 
 ```text
 /msg ChanServ UNBAN #IRCHelp me
-/msg ChanServ UNBAN #Soleluna ALL
+/msg ChanServ UNBAN #irchelp ALL
 ```
 
 ### ChanServ - VOICE
@@ -1697,8 +1697,8 @@ This command grants "voice", i.e. the ability to send text on a moderated channe
 **Examples:**
 
 ```text
-/msg ChanServ VOICE #Italia MaSCiA
-/msg ChanServ VOICE #Baraonda Gino^ mirtilla2 ]Antonio[ _ZIP_
+/msg ChanServ VOICE #irchelp MaSCiA
+/msg ChanServ VOICE #irchelp Gino^ mirtilla2 ]Antonio[ _ZIP_
 ```
 
 ### ChanServ - VOP
@@ -1744,7 +1744,7 @@ NOTE: replace #channel with the name of the channel you wish to modify, and [nic
 **Examples:**
 
 ```text
-/msg ChanServ VOP #Italia ADD MaSCiA
+/msg ChanServ VOP #irchelp ADD MaSCiA
 /msg ChanServ VOP #IRCHelp ADD Kab00m
 /msg ChanServ VOP #IRCHelp ADD *!*pippo@*.carota.net
 /msg ChanServ VOP #IRCHelp DEL 4
@@ -1769,7 +1769,7 @@ Explains why and on what basis ChanServ grants a certain access level on the cha
 **Example:**
 
 ```text
-/msg ChanServ WHY #soleluna ^Norad^
+/msg ChanServ WHY #irchelp ^Norad^
 ```
 
 ### BanType
@@ -2020,7 +2020,7 @@ NOTE: The founder will receive memos regardless of the chosen level.
 
 ```text
 /msg MemoServ SENDTO #irchelp AOP Attenzione a [{^SgRunF^}] è un lamer.
-/msg MemoServ SENDTO #Soleluna VOP Oggi è primavera!!! Auguri a Benedetta
+/msg MemoServ SENDTO #irchelp VOP Oggi è primavera!!! Auguri a Benedetta
 ```
 
 ### MemoServ - SET
@@ -2205,7 +2205,7 @@ Legend of the results obtained:
 **Example:**
 
 ```text
-/msg StatServ CHANSTATS #Italia
+/msg StatServ CHANSTATS #irchelp
 ```
 
 ### StatServ - HELP
@@ -2308,6 +2308,8 @@ Help on a specific command is obtained by typing:
 
 Several user and channel modes are available on Azzurra:
 
+The tables show only the modes available to users: they do not cover the full set of modes supported by the server, as those reserved to IRC Operators have been left out.
+
 - [User Modes](#user-modes) – Available user modes
 - [Channel Modes](#channel-modes) – Available channel modes
 
@@ -2385,14 +2387,14 @@ The **j** mode is not currently supported by services.
 **Examples:**
 
 ```text
-/mode #baruffa +mi
+/mode #irchelp +mi
 /mode #IRCHelp +l 10238
-/mode #Io&Te +k finalmentesoli
-/mode #hack +m-si
-/mode #Operhelp +b *pippo@*interbusiness.it
-/mode #Lilliput +o Gulliver
-/mode #Soleluna         (per vedere i mode impostati)
-/mode #Italia +b        (per vedere i ban impostati)
+/mode #irchelp +k finalmentesoli
+/mode #irchelp +m-si
+/mode #irchelp +b *pippo@*interbusiness.it
+/mode #irchelp +o Gulliver
+/mode #irchelp         (per vedere i mode impostati)
+/mode #irchelp +b        (per vedere i ban impostati)
 ```
 
 ## Miscellaneous
@@ -2506,7 +2508,7 @@ Invites **nick** to the specified channel.
 **Example:**
 
 ```text
-/INVITE kavia #radioitalia
+/INVITE kavia #irchelp
 ```
 
 #### ISON
@@ -2539,10 +2541,10 @@ Attempts to join the specified channel(s), with the specified key(s), if require
 **Examples:**
 
 ```text
-/join #Italia
-/join #Soleluna,#IRCHelp
-/join #SoloNoi paperotto
-/join #Antipatici,#Macedonia war54,ciliegia
+/join #irchelp
+/join #irchelp,#channel
+/join #irchelp paperotto
+/join #irchelp,#channel war54,ciliegia
 ```
 
 #### KICK
@@ -2559,7 +2561,7 @@ Kicks the specified nick(s) from the specified channel(s), with an optional reas
 
 ```text
 /kick #IRCHelp ^L4m3r^ Non disturbare
-/kick #Soleluna,#Liberozone,#Italia warBoT Niente guerra qui
+/kick #irchelp,#channel warBoT Niente guerra qui
 ```
 
 #### LINKS
@@ -2611,7 +2613,7 @@ The available options are:
 /LIST <50
 /LIST >1 <20
 /LIST *musica*
-/LIST #Soleluna
+/LIST #irchelp
 ```
 
 #### LUSERS
@@ -2662,12 +2664,12 @@ The same as above, but for channels. Some channel modes require parameters, whic
 
 ```text
 /mode #IRCHelp +l 10526
-/mode #Io&Te +k finalmentesoli
-/mode #hack +m-si
-/mode #Operhelp +b *pippo@*interbusiness.it
-/mode #Lilliput +o Gulliver
-/mode #Soleluna (per vedere i mode impostati)
-/mode #Italia +b (per vedere i ban impostati)
+/mode #irchelp +k finalmentesoli
+/mode #irchelp +m-si
+/mode #irchelp +b *pippo@*interbusiness.it
+/mode #irchelp +o Gulliver
+/mode #irchelp (per vedere i mode impostati)
+/mode #irchelp +b (per vedere i ban impostati)
 ```
 
 #### MOTD
@@ -2700,7 +2702,7 @@ Provides the list of clients present in the specified channel, with an indicatio
 **Example:**
 
 ```text
-/NAMES #Liberozone
+/NAMES #irchelp
 ```
 
 #### NICK
@@ -2737,7 +2739,7 @@ It can also be used to send a notice to the specified channel (or a list of chan
 ```text
 /NOTICE Rodolfo Stammi lontano che non voglio parlarti
 /NOTICE Mirtilla,Casper,Antonio Facciamo un quiz?
-/NOTICE #Liberozone Buonasera!
+/NOTICE #irchelp Buonasera!
 /NOTICE @+#IRCHelp Ci vediamo domani
 ```
 
@@ -2754,8 +2756,8 @@ Lets you leave the #canale with an optional message.
 **Examples:**
 
 ```text
-/PART #Italia A dopo!
-/PART #Soleluna,#italia esco, ci vediamo
+/PART #irchelp A dopo!
+/PART #irchelp,#channel esco, ci vediamo
 ```
 
 #### PRIVMSG
@@ -2776,8 +2778,8 @@ It can also be used to send a message to a specified channel (or a list of chann
 ```text
 /PRIVMSG Martin Ti va di chiacchierare?
 /PRIVMSG _ZIP_,Jenny Sono tornato!
-/PRIVMSG #Baraonda Buonasera!
-/PRIVMSG @%+#italia Ciao
+/PRIVMSG #irchelp Buonasera!
+/PRIVMSG @%+#irchelp Ciao
 ```
 
 #### QUIT
@@ -2857,7 +2859,7 @@ Shows a channel's topic or changes it if one is specified.
 **Examples:**
 
 ```text
-/TOPIC #Liberozone
+/TOPIC #irchelp
 /TOPIC #IRCHelp =A= Azzurra IRC Help Channel =A= http://help.azzurra.chat prima di domandare =A=
 ```
 
@@ -3000,8 +3002,8 @@ Flags must be specified like user or channel modes – e.g. "-a+c" means "not aw
 
 ```text
 /WHO ^Norad^
-/WHO #Soleluna
-/WHO +ch #italia *pool8250.interbusiness.it
+/WHO #irchelp
+/WHO +ch #irchelp *pool8250.interbusiness.it
 ```
 
 #### WHOIS
