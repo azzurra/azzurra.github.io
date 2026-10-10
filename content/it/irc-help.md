@@ -2622,7 +2622,7 @@ Fornisce statistiche sull’utenza. Se viene specificato **dest**, la risposta v
 /LUSERS * caltanet.azzurra.chat
 ```
 
-### MODE
+### MODE nick
 
 Modifica i modi utente (se specificati) e fornisce i modi utente correnti. **nick** deve essere il nick di chi esegue il comando. Un '+' attiva il modo, mentre un '-' lo disattiva. I modi possono essere associati, ad esempio: `"/MODE mynick +i-wg+s"` (attiva i modi 'i' e 's', e disattiva i modi 'w' e 'g'). Si possono settare al massimo 6 modi per comando.
 
@@ -2639,9 +2639,9 @@ Modifica i modi utente (se specificati) e fornisce i modi utente correnti. **nic
 /mode ^Norad^
 ```
 
-### MODE
+### MODE #canale
 
-La stessa cosa di quanto visto sopra, ma per i canali. Alcuni modi canale richiedono parametri, che sono separati da spazi.
+Come MODE nick, ma per i canali. Alcuni modi canale richiedono parametri, che sono separati da spazi.
 
 **Sintassi:**
 

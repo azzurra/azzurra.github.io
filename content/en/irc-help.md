@@ -2622,7 +2622,7 @@ Provides statistics about the user base. If **dest** is specified, the reply wil
 /LUSERS * caltanet.azzurra.chat
 ```
 
-### MODE
+### MODE nick
 
 Changes the user modes (if specified) and provides the current user modes. **nick** must be the nick of whoever runs the command. A '+' enables the mode, while a '-' disables it. Modes can be combined, for example: `"/MODE mynick +i-wg+s"` (enables modes 'i' and 's', and disables modes 'w' and 'g'). At most 6 modes can be set per command.
 
@@ -2639,9 +2639,9 @@ Changes the user modes (if specified) and provides the current user modes. **nic
 /mode ^Norad^
 ```
 
-### MODE
+### MODE #channel
 
-The same as above, but for channels. Some channel modes require parameters, which are separated by spaces.
+Like MODE nick, but for channels. Some channel modes require parameters, which are separated by spaces.
 
 **Syntax:**
 
