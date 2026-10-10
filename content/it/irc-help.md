@@ -2661,6 +2661,23 @@ Come MODE nick, ma per i canali. Alcuni modi canale richiedono parametri, che so
 /mode #irchelp +b (per vedere i ban impostati)
 ```
 
+### UMODE
+
+Scorciatoia per MODE sul proprio nick: `/UMODE -x` equivale a `/MODE tuonick -x`. Senza modi mostra i modi utente correnti.
+
+**Sintassi:**
+
+```text
+/UMODE [+|-modes]
+```
+
+**Esempi:**
+
+```text
+/umode -x
+/umode +w-i
+```
+
 ### MOTD
 
 Fornisce il Messaggio Del Giorno (Message Of The Day). Se viene specificato **dest**, la risposta viene fornita dal server specificato che può essere un nick o l'indirizzo di un server.
