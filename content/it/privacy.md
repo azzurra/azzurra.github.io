@@ -18,7 +18,7 @@ Il sito è ospitato su **GitHub Pages**, che lo serve direttamente ai visitatori
 
 ### Webchat
 
-La webchat (webchat.azzurra.chat) è un'istanza di **KiwiIRC** gestita da noi ed è servita attraverso **Cloudflare**, che agisce da proxy/CDN: Cloudflare raccoglie automaticamente dati tecnici, tra cui l'indirizzo IP, per sicurezza, performance e prevenzione di abusi, secondo la propria policy, e può impostare cookie tecnici di sicurezza. Collegandoti dalla webchat ti connetti alla rete IRC: i dati di connessione sono trattati come descritto nella sezione 10. Le preferenze della webchat (nick, tema, impostazioni) sono salvate solo nel tuo browser.
+La webchat (webchat.azzurra.chat) è un'istanza di **KiwiIRC** gestita da noi ed è servita attraverso **Cloudflare**, che agisce da proxy/CDN: Cloudflare raccoglie automaticamente dati tecnici, tra cui l'indirizzo IP, per sicurezza, performance e prevenzione di abusi, secondo la propria policy, e può impostare cookie tecnici di sicurezza. Collegandoti dalla webchat ti connetti alla rete IRC: i dati di connessione sono trattati come descritto nella sezione 10. Il gateway della webchat non conserva log delle connessioni né delle conversazioni. Le preferenze della webchat (nick, tema, impostazioni) sono salvate solo nel tuo browser.
 
 ## 3. Finalità e base giuridica
 

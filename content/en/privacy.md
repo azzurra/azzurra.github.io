@@ -18,7 +18,7 @@ The site is hosted on **GitHub Pages**, which serves it directly to visitors. In
 
 ### Webchat
 
-The webchat (webchat.azzurra.chat) is a **KiwiIRC** instance run by us and served through **Cloudflare**, acting as proxy/CDN: Cloudflare automatically collects technical data, including the IP address, for security, performance and abuse prevention, according to its policy, and may set technical security cookies. Connecting from the webchat means connecting to the IRC network: connection data is processed as described in section 10. Webchat preferences (nick, theme, settings) are stored only in your browser.
+The webchat (webchat.azzurra.chat) is a **KiwiIRC** instance run by us and served through **Cloudflare**, acting as proxy/CDN: Cloudflare automatically collects technical data, including the IP address, for security, performance and abuse prevention, according to its policy, and may set technical security cookies. Connecting from the webchat means connecting to the IRC network: connection data is processed as described in section 10. The webchat gateway keeps no logs of connections or conversations. Webchat preferences (nick, theme, settings) are stored only in your browser.
 
 ## 3. Purposes and legal basis
 
