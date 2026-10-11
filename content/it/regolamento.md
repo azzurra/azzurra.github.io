@@ -47,7 +47,7 @@ Le violazioni del regolamento possono comportare:
 - **Kick** dal canale
 - **Ban** temporaneo o permanente dal canale
 - **K-Line** (ban dalla rete) temporaneo o permanente
-- **G-Line** (ban globale) nei casi più gravi
+- **AKill** (ban globale dalla rete) nei casi più gravi
 
 ---
 

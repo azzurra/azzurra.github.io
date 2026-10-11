@@ -48,7 +48,7 @@ Rule violations may result in:
 - **Kick** from a channel
 - **Ban** (temporary or permanent) from a channel
 - **K-Line** (temporary or permanent ban from the network)
-- **G-Line** (global ban) in the most serious cases
+- **AKill** (global network ban) in the most serious cases
 
 ---
 
