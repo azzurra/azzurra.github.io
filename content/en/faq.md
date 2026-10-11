@@ -40,7 +40,7 @@ Yes. `irc.azzurra.chat` hands you one of the public servers, but you can also pi
 | `ruby.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
 | `raccooncity.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
 | `nightwish.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
-| `allnight6.azzurra.chat` | IPv6 | `6667`–`6669` | `6697` `9999` |
+| `allnight6.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
 
 ### What about void, devel and raptor?
 
