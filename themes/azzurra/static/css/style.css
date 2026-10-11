@@ -199,6 +199,9 @@ img { max-width: 100%; height: auto; display: block; }
 .theme-toggle .icon-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+.logo-img.logo-dark { display: none; }
+:root[data-theme="dark"] .logo-img.logo-light { display: none; }
+:root[data-theme="dark"] .logo-img.logo-dark { display: block; }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; color: var(--text-muted); }
 
