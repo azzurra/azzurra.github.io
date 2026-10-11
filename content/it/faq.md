@@ -10,7 +10,7 @@ translationKey: page-faq
 
 Azzurra è la più longeva rete IRC italiana, fondata nel 1997. Offre uno spazio di chat libero e organizzato per la community italiana e non solo.
 
-### IRC è ancora usato nel 2026?
+### IRC è ancora usato oggi?
 
 Sì! IRC è uno dei protocolli di messaggistica più stabili e aperti esistenti. Azzurra conta ancora una community attiva con decine di canali frequentati quotidianamente.
 
