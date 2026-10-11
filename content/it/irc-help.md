@@ -3219,7 +3219,7 @@ L’User ID o ident può essere lungo al massimo 10 caratteri. Come primo caratt
 
 L’host può essere lungo al massimo 63 caratteri; nel caso sia più lungo, compare l’IP (criptato o meno a seconda che sia impostata l’opzione +x sul nick oppure no).
 
-Su Azzurra sono consentite 3 connessioni simultanee (cloni) dallo stesso IP. Alla quinta si viene akillati (bannati da Azzurra) per 10 minuti.
+Su Azzurra sono consentite 4 connessioni simultanee (cloni) dallo stesso IP. Alla quinta si viene akillati (bannati da Azzurra) per 10 minuti.
 
 I topic e i messaggi di kick possono essere lunghi al massimo 307 caratteri, quelli di quit al massimo 301 (poiché il messaggio comprende “quit: ”).
 

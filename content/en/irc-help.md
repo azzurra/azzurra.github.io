@@ -3219,7 +3219,7 @@ The User ID or ident can be at most 10 characters long. The first character is ~
 
 The host can be at most 63 characters long; if it is longer, the IP appears instead (encrypted or not depending on whether the +x option is set on the nick or not).
 
-On Azzurra, 3 simultaneous connections (clones) from the same IP are allowed. On the fifth, you get akilled (banned from Azzurra) for 10 minutes.
+On Azzurra, 4 simultaneous connections (clones) from the same IP are allowed. On the fifth, you get akilled (banned from Azzurra) for 10 minutes.
 
 Topics and kick messages can be at most 307 characters long, quit messages at most 301 (since the message includes "quit: ").
 
