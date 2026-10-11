@@ -10,7 +10,7 @@ translationKey: page-faq
 
 Azzurra is the longest-running Italian IRC network, founded in 1997. It offers a free, organised chat space for the Italian community and beyond.
 
-### Is IRC still used in 2025?
+### Is IRC still used today?
 
 Yes! IRC is one of the most stable and open messaging protocols around. Azzurra still hosts an active community with dozens of channels in daily use.
 
@@ -28,8 +28,23 @@ Use the [webchat](https://webchat.azzurra.chat) right from your browser, or an I
 
 ### Which ports should I use?
 
-- Port **6667** for plain connections
-- Port **6697** for SSL/TLS connections (recommended)
+- Ports **6666**–**6669** for plaintext connections
+- Ports **6697** and **9999** for TLS-encrypted connections (recommended)
+
+### Can I connect to a specific server?
+
+Yes. `irc.azzurra.chat` hands you one of the public servers, but you can also pick one:
+
+| Server | Protocol | Ports | TLS ports |
+|--------|----------|-------|-----------|
+| `ruby.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
+| `raccooncity.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
+| `nightwish.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
+| `allnight6.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
+
+### What about void, devel and raptor?
+
+They are the network's **hubs**: `void.azzurra.chat` is the main hub, `raptor.azzurra.chat` the secondary hub, `devel.azzurra.chat` the development hub. Hubs **do not accept user connections**: they exist for technical routing reasons and link the public servers and services together.
 
 ### Can I use IPv6?
 
