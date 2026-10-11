@@ -9,7 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script>
-    try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (dark) document.documentElement.dataset.theme = 'dark';
+    })();
   </script>
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <link rel="icon" type="image/x-icon"  href="{{ "favicon.ico" | relURL }}">
@@ -110,6 +115,12 @@
     const themeBtn = document.getElementById('theme-toggle');
     const syncThemeBtn = () => themeBtn?.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
     syncThemeBtn();
+    // Finché nessuno ha cliccato, il tema segue quello del sistema anche se cambia a pagina aperta
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      try { if (localStorage.getItem('theme')) return; } catch (err) {}
+      if (e.matches) root.dataset.theme = 'dark'; else delete root.dataset.theme;
+      syncThemeBtn();
+    });
     themeBtn?.addEventListener('click', () => {
       const dark = root.dataset.theme !== 'dark';
       if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
