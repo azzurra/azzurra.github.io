@@ -30,7 +30,7 @@ Il servizio è offerto gratuitamente: Azzurra si riserva il diritto di impedire 
 
 Sono ammesse al massimo **4 connessioni simultanee dallo stesso IP**; alla quinta scatta un AKill automatico. Per un numero maggiore di connessioni scrivi allo staff tramite il [modulo contatti](/contatti).
 
-Sono vietati i proxy aperti o anonimi e qualsiasi sistema usato per aggirare ban o limitazioni; le connessioni in ingresso possono essere verificate automaticamente.
+È vietato connettersi tramite proxy anonimi o qualsiasi altro sistema usato per aggirare ban o limitazioni; le connessioni in ingresso possono essere verificate automaticamente.
 
 Bouncer, bot e connessioni permanenti sono ammessi nei limiti del ragionevole. Un bot può stare in un canale solo con il consenso del suo founder, e non deve generare traffico verso server o servizi (lag-check, ping automatici e simili).
 

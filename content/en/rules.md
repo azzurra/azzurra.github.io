@@ -31,7 +31,7 @@ Distributing, linking or promoting content that is illegal under Italian or Euro
 
 At most **4 simultaneous connections from the same IP** are allowed; the fifth triggers an automatic AKill. To get more connections, write to the staff through the [contact form](/en/contact).
 
-Open or anonymous proxies, and any system used to bypass bans or limits, are forbidden; incoming connections may be checked automatically.
+Connecting through anonymous proxies, or any other system used to bypass bans or limits, is forbidden; incoming connections may be checked automatically.
 
 Bouncers, bots and permanent connections are allowed within reason. A bot may sit in a channel only with its founder's consent, and must not generate traffic towards servers or services (lag checks, automatic pings and the like).
 
