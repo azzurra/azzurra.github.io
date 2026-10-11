@@ -28,8 +28,23 @@ Usa la [webchat](https://webchat.azzurra.chat) direttamente dal browser, oppure 
 
 ### Quali porte devo usare?
 
-- Porta **6667** per connessioni standard
-- Porta **6697** per connessioni SSL/TLS (consigliata)
+- Porte **6666**–**6669** per connessioni in chiaro
+- Porte **6697** e **9999** per connessioni cifrate TLS (consigliate)
+
+### Posso collegarmi a un server preciso?
+
+Sì. `irc.azzurra.chat` ti assegna uno dei server pubblici, ma puoi anche sceglierne uno:
+
+| Server | Protocollo | Porte | Porte TLS |
+|--------|-----------|-------|-----------|
+| `ruby.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
+| `raccooncity.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
+| `nightwish.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
+| `allnight6.azzurra.chat` | IPv6 | `6667`–`6669` | `6697` `9999` |
+
+### E void, devel e raptor?
+
+Sono gli **hub** della rete: `void.azzurra.chat` è l'hub principale, `raptor.azzurra.chat` l'hub secondario, `devel.azzurra.chat` l'hub di sviluppo. Gli hub **non accettano connessioni dagli utenti**: esistono per ragioni tecniche di instradamento e collegano tra loro i server pubblici e i servizi.
 
 ### Posso usare IPv6?
 
