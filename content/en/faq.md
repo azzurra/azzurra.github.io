@@ -10,7 +10,7 @@ translationKey: page-faq
 
 Azzurra is the longest-running Italian IRC network, founded in 1997. It offers a free, organised chat space for the Italian community and beyond.
 
-### Is IRC still used in 2025?
+### Is IRC still used in 2026?
 
 Yes! IRC is one of the most stable and open messaging protocols around. Azzurra still hosts an active community with dozens of channels in daily use.
 
