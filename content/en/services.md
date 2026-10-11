@@ -5,6 +5,8 @@ translationKey: page-servizi
 aliases: [/en/servizi/]
 ---
 
+> Only the essential commands are listed here. The full guide to every services and server command is in **[IRC Help](/en/irc-help/)**.
+
 ## NickServ
 
 Handles nickname registration and protection.

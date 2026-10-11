@@ -4,6 +4,8 @@ lead: "I bot e servizi disponibili sulla rete Azzurra per gestire nickname, cana
 translationKey: page-servizi
 ---
 
+> Qui trovi solo i comandi essenziali. La guida completa a tutti i comandi dei servizi e del server è su **[IRC Help](/irc-help/)**.
+
 ## NickServ
 
 Gestisce la registrazione e la protezione dei nickname.
