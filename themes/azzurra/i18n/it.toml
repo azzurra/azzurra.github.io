@@ -11,6 +11,9 @@ other = "Web Chat ↗"
 [langSwitcherLabel]
 other = "Cambia lingua"
 
+[themeToggleLabel]
+other = "Tema chiaro/scuro"
+
 # Footer
 [footerNetworkColumn]
 other = "Rete"
