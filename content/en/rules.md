@@ -51,6 +51,8 @@ Abusing the services (NickServ, ChanServ, MemoServ…) is forbidden: registering
 
 Evading a ban, a K-Line or an AKill — with other nicks, other IPs or any other means — is itself a violation and extends the sanction.
 
+In case of repeated evasion, the staff reserves the right to report the abuse to the provider (ISP) the connections come from.
+
 ---
 
 ## Channel rules

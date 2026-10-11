@@ -50,6 +50,8 @@ Sono vietati attacchi di qualsiasi tipo contro utenti, canali o server della ret
 
 Aggirare un ban, una K-Line o un AKill, con altri nick, altri IP o qualsiasi altro mezzo, è a sua volta una violazione e comporta l'estensione della sanzione.
 
+In caso di elusioni ripetute, lo staff si riserva il diritto di segnalare l'abuso al provider (ISP) da cui provengono le connessioni.
+
 ---
 
 ## Regole dei canali
