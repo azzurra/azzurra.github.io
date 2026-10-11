@@ -28,7 +28,7 @@ Il servizio è offerto gratuitamente: Azzurra si riserva il diritto di impedire 
 
 ### 4. Cloni, proxy, bot e bouncer
 
-Sono ammesse al massimo **3 connessioni simultanee dallo stesso IP**; oltre il limite scatta un AKill automatico. Per un numero maggiore di connessioni scrivi allo staff tramite il [modulo contatti](/contatti).
+Sono ammesse al massimo **4 connessioni simultanee dallo stesso IP**; alla quinta scatta un AKill automatico. Per un numero maggiore di connessioni scrivi allo staff tramite il [modulo contatti](/contatti).
 
 Sono vietati i proxy aperti o anonimi e qualsiasi sistema usato per aggirare ban o limitazioni; le connessioni in ingresso possono essere verificate automaticamente.
 

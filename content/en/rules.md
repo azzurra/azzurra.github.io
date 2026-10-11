@@ -29,7 +29,7 @@ Distributing, linking or promoting content that is illegal under Italian or Euro
 
 ### 4. Clones, proxies, bots and bouncers
 
-At most **3 simultaneous connections from the same IP** are allowed; going over the limit triggers an automatic AKill. To get more connections, write to the staff through the [contact form](/en/contact).
+At most **4 simultaneous connections from the same IP** are allowed; the fifth triggers an automatic AKill. To get more connections, write to the staff through the [contact form](/en/contact).
 
 Open or anonymous proxies, and any system used to bypass bans or limits, are forbidden; incoming connections may be checked automatically.
 
