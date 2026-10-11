@@ -1,6 +1,6 @@
 ---
 title: "Informativa sulla Privacy"
-lead: "Come Azzurra IRC Network tratta i dati personali di chi usa il sito, le caselle email e la rete IRC."
+lead: "Come Azzurra IRC Network tratta i dati personali di chi usa il sito, la webchat, le caselle email e la rete IRC."
 translationKey: page-privacy
 ---
 
@@ -14,17 +14,21 @@ Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali puoi scr
 
 Il sito azzurra.chat è statico e non implementa strumenti di analisi (analytics) o tracciamento aggiunti direttamente da noi.
 
-Il sito è distribuito tramite **GitHub** (hosting dei contenuti) ed è servito attraverso **Cloudflare**, che agisce da proxy/CDN. Per il funzionamento di questi servizi, entrambi i fornitori raccolgono automaticamente dati tecnici — tra cui l'indirizzo IP — per finalità di sicurezza, performance e prevenzione di abusi, secondo le rispettive policy. Non abbiamo accesso diretto a questi log né controllo sulla loro gestione.
+Il sito è ospitato su **GitHub Pages**, che lo serve direttamente ai visitatori. Per il funzionamento del servizio, GitHub raccoglie automaticamente dati tecnici — tra cui l'indirizzo IP — per finalità di sicurezza, performance e prevenzione di abusi, secondo la propria policy. Non abbiamo accesso diretto a questi log né controllo sulla loro gestione.
+
+### Webchat
+
+La webchat (webchat.azzurra.chat) è un'istanza di **KiwiIRC** gestita da noi ed è servita attraverso **Cloudflare**, che agisce da proxy/CDN: Cloudflare raccoglie automaticamente dati tecnici, tra cui l'indirizzo IP, per sicurezza, performance e prevenzione di abusi, secondo la propria policy, e può impostare cookie tecnici di sicurezza. Collegandoti dalla webchat ti connetti alla rete IRC: i dati di connessione sono trattati come descritto nella sezione 10. Le preferenze della webchat (nick, tema, impostazioni) sono salvate solo nel tuo browser.
 
 ## 3. Finalità e base giuridica
 
 | Dato | Finalità | Base giuridica |
 |---|---|---|
-| Indirizzo IP (log tecnici di GitHub e Cloudflare) | Sicurezza, performance, prevenzione abusi | Legittimo interesse (art. 6.1.f GDPR), nostro e dei fornitori |
+| Indirizzo IP (log tecnici di GitHub per il sito, di Cloudflare per la webchat) | Sicurezza, performance, prevenzione abusi | Legittimo interesse (art. 6.1.f GDPR), nostro e dei fornitori |
 
 ## 4. Conservazione dei dati
 
-I tempi di conservazione dei log tecnici lato hosting e CDN sono determinati da GitHub e Cloudflare secondo le rispettive policy, non essendo direttamente gestiti da noi:
+I tempi di conservazione dei log tecnici di hosting (sito) e CDN (webchat) sono determinati da GitHub e Cloudflare secondo le rispettive policy, non essendo direttamente gestiti da noi:
 
 - Privacy policy GitHub: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
 - Privacy policy Cloudflare: https://www.cloudflare.com/privacypolicy/
@@ -37,7 +41,7 @@ Non disponiamo di strumenti per verificare tecnicamente l'età dichiarata: il ri
 
 ## 6. Comunicazione a terzi
 
-I dati raccolti tramite il sito web non vengono comunicati a terzi al di fuori di quanto necessario per l'erogazione del servizio (hosting e CDN, vedi sezione 4), salvo obblighi di legge o richieste formali da parte dell'autorità giudiziaria.
+I dati raccolti tramite il sito web e la webchat non vengono comunicati a terzi al di fuori di quanto necessario per l'erogazione del servizio (hosting del sito e CDN della webchat, vedi sezione 4), salvo obblighi di legge o richieste formali da parte dell'autorità giudiziaria.
 
 GitHub e Cloudflare, in quanto fornitori extra-UE, trattano i dati secondo accordi conformi al GDPR, che prevedono le garanzie previste dalla normativa per il trasferimento di dati al di fuori dell'Unione Europea.
 
@@ -49,7 +53,7 @@ Hai inoltre il diritto di proporre reclamo al Garante per la protezione dei dati
 
 ## 8. Misure di sicurezza
 
-Il sito è servito tramite connessione cifrata (HTTPS). La gestione e la sicurezza dei log tecnici seguono le misure adottate da GitHub e Cloudflare secondo le rispettive policy (vedi sezioni 2 e 4) — non gestiamo direttamente infrastrutture server per il sito.
+Il sito e la webchat sono serviti tramite connessione cifrata (HTTPS). La gestione e la sicurezza dei log tecnici seguono le misure adottate da GitHub e Cloudflare secondo le rispettive policy (vedi sezioni 2 e 4) — non gestiamo direttamente infrastrutture server per il sito.
 
 ## 9. Caselle email
 
@@ -81,4 +85,4 @@ I dati associati a un account NickServ (email, impostazioni) vengono conservati 
 
 ---
 
-Informativa aggiornata al 13.08.2026
+Informativa aggiornata al 12.10.2026
