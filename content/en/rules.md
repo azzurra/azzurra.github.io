@@ -41,7 +41,7 @@ Nicknames and channel names must not contain offensive, sexist, racist reference
 
 ### 6. Attacks and abuse
 
-Attacks of any kind against users, channels or servers of the network are forbidden: flood and DoS, war or takeover scripts, mass-invites, sending viruses, trojans or unsolicited files.
+Attacks of any kind against users, channels or servers of the network are forbidden: flood and DoS, channel takeover scripts, mass-invites, sending viruses, trojans or unsolicited files.
 
 ### 7. Services
 

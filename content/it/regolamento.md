@@ -40,7 +40,7 @@ I nickname e i nomi canale non devono contenere riferimenti offensivi, sessisti,
 
 ### 6. Attacchi e abusi
 
-Sono vietati attacchi di qualsiasi tipo contro utenti, canali o server della rete: flood e DoS, script di guerra o di takeover, mass-invite, invio di virus, trojan o file non richiesti.
+Sono vietati attacchi di qualsiasi tipo contro utenti, canali o server della rete: flood e DoS, script per impadronirsi dei canali (takeover), mass-invite, invio di virus, trojan o file non richiesti.
 
 ### 7. Servizi
 
