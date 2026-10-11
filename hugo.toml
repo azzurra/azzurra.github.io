@@ -31,7 +31,7 @@ defaultContentLanguageInSubdir = false
       value = "1997"
       label = "Fondata"
     [[languages.it.params.stats]]
-      value = "27+"
+      value = "29+"
       label = "Anni online"
     [[languages.it.params.stats]]
       value = "100+"
@@ -134,7 +134,7 @@ defaultContentLanguageInSubdir = false
       value = "1997"
       label = "Founded"
     [[languages.en.params.stats]]
-      value = "27+"
+      value = "29+"
       label = "Years online"
     [[languages.en.params.stats]]
       value = "100+"
