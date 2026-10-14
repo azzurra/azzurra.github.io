@@ -408,6 +408,9 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-brand .footer-logo { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; letter-spacing: 0.04em; }
 .footer-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.48); line-height: 1.65; max-width: 300px; }
 .footer-brand code { font-family: var(--font-mono); color: rgba(255,255,255,0.78); background: none; font-size: inherit; }
+.footer-social { display: flex; gap: 0.75rem; margin-top: 0.9rem; }
+.footer-social a { display: inline-flex; color: rgba(255,255,255,0.48); transition: var(--transition); }
+.footer-social a:hover { color: #fff; }
 .footer-links { display: flex; gap: 2.5rem; }
 .footer-col h4 { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.38); margin-bottom: 0.75rem; }
 .footer-col a { display: block; font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-bottom: 0.4rem; }
