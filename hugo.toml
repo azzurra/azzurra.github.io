@@ -94,6 +94,12 @@ defaultContentLanguageInSubdir = false
     [languages.it.menus.footer.params]
       col = "rete"
   [[languages.it.menus.footer]]
+    name   = "Giochi"
+    url    = "/giochi"
+    weight = 5
+    [languages.it.menus.footer.params]
+      col = "rete"
+  [[languages.it.menus.footer]]
     name   = "La Storia"
     url    = "/storia"
     weight = 1
@@ -200,6 +206,12 @@ defaultContentLanguageInSubdir = false
     name   = "IRC Help"
     url    = "/en/irc-help"
     weight = 4
+    [languages.en.menus.footer.params]
+      col = "rete"
+  [[languages.en.menus.footer]]
+    name   = "Games"
+    url    = "/en/games"
+    weight = 5
     [languages.en.menus.footer.params]
       col = "rete"
   [[languages.en.menus.footer]]
