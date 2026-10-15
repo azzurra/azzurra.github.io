@@ -420,10 +420,13 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-bottom a:hover { color: rgba(255,255,255,0.65); }
 
 /* ══ RESPONSIVE ══ */
-@media (max-width: 700px) {
+/* Hamburger cutoff: the full Italian header needs ~1170px; keep it above that */
+@media (max-width: 1200px) {
   .site-nav { display: none; }
   .site-nav.open { display: flex; flex-direction: column; position: absolute; top: 66px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border-light); padding: 0.75rem; box-shadow: var(--shadow); }
   .nav-toggle { display: block; }
+}
+@media (max-width: 700px) {
   .stat-item { padding: 0.9rem 1.5rem; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-links { flex-wrap: wrap; gap: 1.5rem; }
