@@ -2320,7 +2320,6 @@ The tables show only the modes available to users: they do not cover the full se
 | a | (Services Only) Marks a Services Administrator. |
 | h | (HelpOp Only) Marks a Help Operator (+h can only be obtained via identification). |
 | i | Invisible to users running the /names or /who command. |
-| j | Marks a client chatting from the web via Java. |
 | r | (Services Only) Marks a nick registered with NickServ and identified. |
 | R | Accepts queries only from nicks registered with NickServ and identified. |
 | S | Marks a client connecting via SSL (Secure Sockets Layer). |
