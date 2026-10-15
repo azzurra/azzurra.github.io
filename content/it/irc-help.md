@@ -2320,7 +2320,6 @@ Le tabelle mostrano solo i modi utilizzabili dagli utenti: non comprendono l'int
 | a | (Services Only) Contraddistingue un Services Administrator. |
 | h | (HelpOp Only) Contraddistingue un Help Operator (Il +h si può avere solo via identificazione). |
 | i | Invisibile agli utenti che eseguono il comando /names o il comando /who. |
-| j | Contraddistingue un client che chatta dal web tramite Java. |
 | r | (Services Only) Contraddistingue un nick registrato con NickServ e identificato. |
 | R | Accetta query solo da nick registrati con NickServ e identificati. |
 | S | Contraddistingue un client che si connette via SSL (Secure Sockets Layer). |
