@@ -10,59 +10,6 @@ Each channel runs one game at a time: while a game is in progress, GameBot's inc
 
 ---
 
-## Cards Against Humanity
-
-The party game "for horrible people", in Italian. Each hand one player is the **czar**: the bot shows a black card with a sentence to complete, everyone else picks the best (or most absurd) white card from their hand, and the czar chooses the winner. The winner of the hand scores a point; the czar rotates every hand.
-
-### How to play
-
-1. Someone opens the table with `!cah`. Whoever opens it is already seated.
-2. Everyone else has **60 seconds** to sit down by typing `jo` in the channel. At least **3 players** are needed, otherwise the table closes.
-3. Each player gets **7 white cards in private**, numbered.
-4. The bot shows the black card. Everyone except the czar plays with `pl N`, where N is the card number. If the black card has more than one blank, play more cards: `pl 3 5`. You can play in the channel or, to keep it secret, privately: in a query (`/msg MikeBongiorno pl 3`) or as a notice (`/notice MikeBongiorno pl 3`). The bot never replies to plays sent as a notice, not even when the number is wrong.
-5. When time runs out (or everyone has played) the answers are shown in random order and **without nicks**. The czar picks one with `!vince N`.
-6. The first player to reach the target score wins the game: **5 points** unless you choose otherwise.
-
-Timers: **90 seconds** to play, **90 seconds** for the czar to choose. If the czar doesn't choose, nobody scores that hand. A player who misses two hands in a row is removed from the table; two hands in a row with no cards played end the game.
-
-### Commands
-
-| Command | What it does |
-|---------|--------------|
-| `!cah` | Opens the table (game to 5 points) |
-| `!cah start N` | Opens the table with a game to N points (max 15) |
-| `jo` | Sit down at the table. If a game is running you play from the next hand |
-| `!cah esci` | Leave the table |
-| `pl N` | Play card N (`pl N M` if the black card asks for two); also in a query or notice to the bot |
-| `!vince N` | The czar picks the winning answer |
-| `!cah carte` | Sends your hand again in private |
-| `!cah stato` | Where the hand is at, who still has to play |
-| `!cah punti` | Scores of the current game; with no game running, the all-time ranking |
-| `!cah top` | All-time ranking (hands won) |
-| `!cah stop` | Closes the table |
-| `!cah help` | Command summary |
-
-The older commands still work: `!cah entra` to sit down, `!play N` to play, and the English aliases `!cah join`, `!cah quit`, `!cah points`, `!cah cards`, `!cah status`, `!winner N`. You can sit at one table at a time.
-
-### Who opens and closes the table
-
-On #italia the table can only be opened and closed by **channel operators** and **Azzurra staff**. Everyone else can sit down, play and check scores and status whenever a game is open.
-
-### Protected hours
-
-Some cards are for an adult audience only. On #italia:
-
-- **from 9:00 to 22:00**, protected hours: adult-only cards are left out;
-- **from 22:00 to 9:00**: full deck.
-
-Times are Italian time. The bot announces the current band when the table opens and warns when it changes during a game; the change applies from the next hand.
-
-### The cards
-
-The Italian cards come from [ilario/Cards-Against-Humanity-ITA](https://github.com/ilario/Cards-Against-Humanity-ITA): Federico's translation, revised and typeset by Ilario, plus the [CaH42project](http://cah42project.it) expansion. They are distributed under the [Creative Commons BY-NC-SA 2.0 IT](https://creativecommons.org/licenses/by-nc-sa/2.0/it/) license. Cards Against Humanity is a game by Cards Against Humanity LLC, released under a Creative Commons BY-NC-SA license.
-
----
-
 ## UNO
 
 The classic card game: in turn, discard a card matching the colour or the value of the one in play. The first player to run out of cards wins.
@@ -228,6 +175,6 @@ The dictionary is derived from [Morph-it!](https://docs.sslmit.unibo.it/doku.php
 
 ## Rankings
 
-`!classifica` on its own shows the Trivial and Sillabah rankings; `!classifica trivial` or `!classifica sillabah` only the one you name. The Cards Against Humanity ranking is shown with `!cah top`, the UNO ones with `!toppunti`, `!topwin`, `!topchan` and `!topchans`.
+`!classifica` on its own shows the Trivial and Sillabah rankings; `!classifica trivial` or `!classifica sillabah` only the one you name. The UNO rankings are shown with `!toppunti`, `!topwin`, `!topchan` and `!topchans`.
 
 Have fun!

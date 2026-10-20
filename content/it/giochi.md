@@ -10,59 +10,6 @@ In ogni canale si gioca una partita alla volta: se ce n'è una in corso, anche d
 
 ---
 
-## Cards Against Humanity
-
-Il gioco di carte "per gente orribile", in italiano. A ogni mano un giocatore fa da **czar**: il bot mostra una carta nera con una frase da completare, gli altri scelgono dalla propria mano la carta bianca più adatta (o più assurda), e lo czar sceglie la migliore. Chi vince la mano prende un punto; lo czar cambia a ogni mano.
-
-### Come si gioca
-
-1. Qualcuno apre il tavolo con `!cah`. Chi lo apre è già seduto.
-2. Gli altri hanno **60 secondi** per sedersi scrivendo `jo` in canale. Servono almeno **3 giocatori**, altrimenti il tavolo si chiude.
-3. Ogni giocatore riceve **7 carte bianche in privato**, numerate.
-4. Il bot mostra la carta nera. Chi non è czar gioca con `pl N`, dove N è il numero della carta. Se la nera ha più spazi da riempire, si giocano più carte: `pl 3 5`. Si può giocare in canale o, per non farsi vedere, in privato al bot: in query (`/msg MikeBongiorno pl 3`) oppure in notice (`/notice MikeBongiorno pl 3`). Alle giocate in notice il bot non risponde, nemmeno se il numero è sbagliato.
-5. Allo scadere (o quando hanno giocato tutti) le risposte compaiono in ordine casuale e **senza nick**. Lo czar sceglie con `!vince N`.
-6. Vince la partita chi arriva per primo ai punti stabiliti: **5** se non si dice altro.
-
-Tempi: **90 secondi** per giocare, **90 secondi** allo czar per scegliere. Se lo czar non sceglie, la mano non assegna punti. Chi salta due mani di fila esce dal tavolo; due mani di fila senza nessuna giocata chiudono la partita.
-
-### Comandi
-
-| Comando | Cosa fa |
-|---------|---------|
-| `!cah` | Apre il tavolo (partita a 5 punti) |
-| `!cah start N` | Apre il tavolo con una partita a N punti (massimo 15) |
-| `jo` | Ti siedi al tavolo. A partita in corso giochi dalla mano successiva |
-| `!cah esci` | Ti alzi dal tavolo |
-| `pl N` | Giochi la carta N (`pl N M` se la nera chiede due carte); anche in query o in notice al bot |
-| `!vince N` | Lo czar sceglie la risposta vincente |
-| `!cah carte` | Ti rimanda la mano in privato |
-| `!cah stato` | A che punto è la mano, chi deve ancora giocare |
-| `!cah punti` | Punti della partita in corso; senza partita, la classifica storica |
-| `!cah top` | Classifica storica (mani vinte) |
-| `!cah stop` | Chiude il tavolo |
-| `!cah aiuto` | Riepilogo dei comandi |
-
-Funzionano anche i comandi delle versioni precedenti: `!cah entra` per sedersi, `!play N` per giocare, e gli alias inglesi `!cah join`, `!cah quit`, `!cah points`, `!cah cards`, `!cah status`, `!winner N`. Si gioca a una partita per volta: chi è già seduto a un tavolo non può sedersi a un altro.
-
-### Chi apre e chiude il tavolo
-
-Su #italia il tavolo lo aprono e lo chiudono solo gli **operatori del canale** e lo **staff di Azzurra**. Tutti gli altri possono sedersi, giocare e consultare punti e stato quando c'è una partita aperta.
-
-### Fascia protetta
-
-Alcune carte sono adatte solo a un pubblico adulto. Su #italia:
-
-- **dalle 9 alle 22**, fascia protetta: le carte vietate ai minori non escono;
-- **dalle 22 alle 9**: mazzo completo.
-
-Gli orari sono quelli italiani. Il bot dice la fascia in vigore quando si apre il tavolo e avvisa quando cambia a partita in corso; il cambio vale dalla mano successiva.
-
-### Le carte
-
-Le carte italiane vengono da [ilario/Cards-Against-Humanity-ITA](https://github.com/ilario/Cards-Against-Humanity-ITA): la traduzione di Federico, rivista e impaginata da Ilario, e l'espansione di [CaH42project](http://cah42project.it). Sono distribuite con licenza [Creative Commons BY-NC-SA 2.0 IT](https://creativecommons.org/licenses/by-nc-sa/2.0/it/). Cards Against Humanity è un gioco di Cards Against Humanity LLC, rilasciato con licenza Creative Commons BY-NC-SA.
-
----
-
 ## UNO
 
 Il classico gioco di carte: a turno si scarta una carta dello stesso colore o dello stesso valore di quella in gioco. Vince chi resta per primo senza carte.
@@ -228,6 +175,6 @@ Il dizionario è derivato da [Morph-it!](https://docs.sslmit.unibo.it/doku.php?i
 
 ## Classifiche
 
-`!classifica` da solo mostra le classifiche di Trivial e Sillabah; `!classifica trivial` o `!classifica sillabah` solo quella del gioco indicato. La classifica di Cards Against Humanity si vede con `!cah top`, quelle di UNO con `!toppunti`, `!topwin`, `!topchan` e `!topchans`.
+`!classifica` da solo mostra le classifiche di Trivial e Sillabah; `!classifica trivial` o `!classifica sillabah` solo quella del gioco indicato. Le classifiche di UNO si vedono con `!toppunti`, `!topwin`, `!topchan` e `!topchans`.
 
 Buon divertimento!
