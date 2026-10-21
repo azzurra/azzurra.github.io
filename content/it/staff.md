@@ -18,6 +18,17 @@ Per le domande sull'uso di IRC e dei servizi passa prima da `#IRCHelp`, per le q
 | Nick | Email |
 |------|-------|
 | joep | <joep@azzurra.chat> |
+| Hypnotize | <hypnotize@azzurra.chat> |
+| Mezmerize | <mezmerize@azzurra.chat> |
+| Sonic | <sonic@azzurra.chat> |
+
+## Services Coder
+
+| Nick | Email |
+|------|-------|
+| morph | <morpheus@azzurra.chat> |
+| Sonic | <sonic@azzurra.chat> |
+| vjt | <vjt@azzurra.chat> |
 
 ## Network Root
 
