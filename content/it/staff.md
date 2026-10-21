@@ -17,8 +17,8 @@ Per le domande sull'uso di IRC e dei servizi passa prima da `#IRCHelp`, per le q
 
 | Nick | Email |
 |------|-------|
-| joep | <joep@azzurra.chat> |
 | Hypnotize | <hypnotize@azzurra.chat> |
+| joep | <joep@azzurra.chat> |
 | Mezmerize | <mezmerize@azzurra.chat> |
 | Sonic | <sonic@azzurra.chat> |
 
