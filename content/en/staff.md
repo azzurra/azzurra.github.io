@@ -17,8 +17,8 @@ For questions about using IRC and the services, try `#IRCHelp` first; for techni
 
 | Nick | Email |
 |------|-------|
-| joep | <joep@azzurra.chat> |
 | Hypnotize | <hypnotize@azzurra.chat> |
+| joep | <joep@azzurra.chat> |
 | Mezmerize | <mezmerize@azzurra.chat> |
 | Sonic | <sonic@azzurra.chat> |
 
