@@ -30,8 +30,8 @@ other = "Connettiti su <code>irc.azzurra.chat</code> porta 6667 (SSL: 6697)."
 [footerCopyright]
 other = "© 1997–{{ .Year }} Azzurra IRC Network. Tutti i diritti riservati."
 
-[footerStaffPrefix]
-other = "Staff:"
+[footerStaffLink]
+other = "Contatti dello staff"
 
 # Home (index.html)
 [heroBadge]
