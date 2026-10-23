@@ -56,6 +56,11 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Build WKD tree from static/pgp/*.asc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gpg-wks-client
+          scripts/wkd.sh public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
