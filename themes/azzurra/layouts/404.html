@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+{{- /* GitHub Pages serves only the root /404.html for every missing path,
+       whatever the language, so this page carries both IT and EN. */ -}}
+<section class="home-hero not-found">
+  <img class="logo-img logo-light not-found-logo" src="{{ "/img/logo.png" | relURL }}" alt="Azzurra IRC Network">
+  <img class="logo-img logo-dark not-found-logo" src="{{ "/img/logo-dark.png" | relURL }}" alt="Azzurra IRC Network">
+  <div class="badge">404</div>
+  <h1>No such channel</h1>
+  <pre class="not-found-irc"><span class="nf-cmd">/join #questa-pagina</span>
+-!- #questa-pagina: No such channel</pre>
+  <p class="subtitle">
+    La pagina che cerchi non esiste, o è stata spostata.<br>
+    <span lang="en">The page you are looking for does not exist, or has moved.</span>
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ "/" | relURL }}">Torna alla home</a>
+    <a class="btn btn-secondary" href="{{ "/en/" | relURL }}" hreflang="en">Back to the home page</a>
+  </div>
+</section>
+
+<style>
+  .not-found-logo { height: 72px; width: auto; margin: 0 auto 1.5rem; }
+  .not-found-logo.logo-light, :root[data-theme="dark"] .not-found-logo.logo-dark { display: block; }
+  :root[data-theme="dark"] .not-found-logo.logo-light { display: none; }
+  .not-found-irc {
+    display: inline-block; text-align: left;
+    font-family: var(--font-mono); font-size: 0.9rem;
+    background: var(--navy); color: var(--text-on-dark);
+    padding: 0.9rem 1.2rem; border-radius: var(--radius);
+    margin: 0 auto 1.75rem; max-width: 100%; overflow-x: auto;
+  }
+  .not-found-irc .nf-cmd { color: var(--primary-light); }
+</style>
+
+{{ end }}
