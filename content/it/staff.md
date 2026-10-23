@@ -9,35 +9,35 @@ Per le domande sull'uso di IRC e dei servizi passa prima da `#IRCHelp`, per le q
 
 ## Help Operator
 
-| Nick | Email |
-|------|-------|
-| Fairy | <fairy@azzurra.chat> |
+| Nick | Email | PGP |
+|------|-------|-----|
+| Fairy | <fairy@azzurra.chat> | — |
 
 ## Server Administrator
 
-| Nick | Email |
-|------|-------|
-| Hypnotize | <hypnotize@azzurra.chat> |
-| joep | <joep@azzurra.chat> |
-| Mezmerize | <mezmerize@azzurra.chat> |
-| Sonic | <sonic@azzurra.chat> |
+| Nick | Email | PGP |
+|------|-------|-----|
+| Hypnotize | <hypnotize@azzurra.chat> | [chiave](/pgp/hypnotize.asc) |
+| joep | <joep@azzurra.chat> | — |
+| Mezmerize | <mezmerize@azzurra.chat> | — |
+| Sonic | <sonic@azzurra.chat> | — |
 
 ## Services Coder
 
-| Nick | Email |
-|------|-------|
-| morph | <morpheus@azzurra.chat> |
-| Sonic | <sonic@azzurra.chat> |
-| vjt | <vjt@azzurra.chat> |
+| Nick | Email | PGP |
+|------|-------|-----|
+| morph | <morpheus@azzurra.chat> | — |
+| Sonic | <sonic@azzurra.chat> | — |
+| vjt | <vjt@azzurra.chat> | — |
 
 ## Network Root
 
-| Nick | Email |
-|------|-------|
-| Hypnotize | <hypnotize@azzurra.chat> |
-| Mezmerize | <mezmerize@azzurra.chat> |
-| morph | <morpheus@azzurra.chat> |
-| Sonic | <sonic@azzurra.chat> |
-| vjt | <vjt@azzurra.chat> |
+| Nick | Email | PGP |
+|------|-------|-----|
+| Hypnotize | <hypnotize@azzurra.chat> | [chiave](/pgp/hypnotize.asc) |
+| Mezmerize | <mezmerize@azzurra.chat> | — |
+| morph | <morpheus@azzurra.chat> | — |
+| Sonic | <sonic@azzurra.chat> | — |
+| vjt | <vjt@azzurra.chat> | — |
 
-Per lo staff nel suo insieme scrivi a <irc@azzurra.chat>.
+Per lo staff nel suo insieme scrivi a <irc@azzurra.chat>. Per cifrare il messaggio puoi usare la [chiave PGP di irc@azzurra.chat](/pgp/irc.asc) (`2373 CBF0 983D 526E AF7B  96E5 66DC 130C 0F45 70A4`).

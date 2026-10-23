@@ -1,0 +1,21 @@
+name: PGP keys
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "static/pgp/**"
+      - "scripts/wkd.sh"
+
+jobs:
+  check:
+    name: Validate static/pgp/*.asc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install gpg-wks-client
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gpg-wks-client
+      - name: Validate keys and build the WKD tree
+        run: scripts/wkd.sh "${{ runner.temp }}/wkd"
