@@ -41,6 +41,7 @@ Sì. `irc.azzurra.chat` ti assegna uno dei server pubblici, ma puoi anche scegli
 | `raccooncity.azzurra.chat` | IPv4 | `6666`–`6669` | `6697` `9999` |
 | `nightwish.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
 | `allnight6.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
+| `supernova.azzurra.chat` | IPv6 | `6666`–`6669` | `6697` `9999` |
 
 ### E void, devel e raptor?
 
